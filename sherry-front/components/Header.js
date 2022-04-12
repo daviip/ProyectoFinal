@@ -5,7 +5,7 @@ import styles from '../styles/Home.module.css'
 
 export const Header = () => {
     return (
-        <div className={ styles.container }>
+        <div className={ styles.containerHeader }>
             <div className={ styles.image }>
                 <Image src={ Logo } width={ 130 } height={ 120 } />
             </div>  

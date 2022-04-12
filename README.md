@@ -18,7 +18,7 @@ La finalidad del proyecto es la anteriormente descrita,  y tendrá el siguiente 
 
 ##### Medios hardware y software a utilizar
 
-- Para el desarrollo se pretende utilizar el framework Django, conectado con una base de datos MySql. Usaré también HTML, CSS y JavaScript para la parte fronted.
+- Para el desarrollo se pretende utilizar el Nodejs y Nextjs, conectado con una base de datos mongodb. Usaré también React para la parte fronted.
 - Además, necesitaré mi ordenador personal para poner desarrollarlo todo junto al entorno de desarrollo que usaré, que será Visual Studio Code.
 
 ##### Planificación
