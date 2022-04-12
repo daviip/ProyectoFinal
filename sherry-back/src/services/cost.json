@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "nombre": "Mensual",
+        "precio": 26.00
+    },
+    {
+        "id": 2,
+        "nombre": "Trimestral",
+        "precio": 70.00
+    },
+    {
+        "id": 3,
+        "nombre": "Anual",
+        "precio": 250.00
+    },
+    {
+        "id": 4,
+        "nombre": "Pase día",
+        "precio": 5.00
+    },
+    {
+        "id": 5,
+        "nombre": "Bono 10 pases",
+        "precio": 25.00         
+    },
+    {
+        "id": 6,
+        "nombre": "Pareja Mensual",
+        "precio": 50.00         
+    },
+    {
+        "id": 7,
+        "nombre": "Familiar Mensual(4personas)",
+        "precio": 90.00         
+    },
+    {
+        "id": 8,
+        "nombre": "Estudiante",
+        "precio": 20.00         
+    },
+    {
+        "id": 9,
+        "nombre": "Mayores 65 años",
+        "precio": 20.00         
+    }
+]

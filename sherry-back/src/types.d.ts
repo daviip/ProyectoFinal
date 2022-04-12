@@ -6,3 +6,9 @@ export interface IUser {
     dni: string;
     telefono: number;
 }
+
+export interface ICost{
+    id: number;
+    nombre: string;
+    precio: number;
+}

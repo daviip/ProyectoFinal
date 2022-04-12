@@ -1,5 +1,6 @@
 import express from 'express';
 import users from './routes/users';
+import cost from './routes/cost';
 const app = express();
 app.use(express.json());
 
@@ -10,7 +11,8 @@ app.get('/ping', (_req, res) => {
     res.send('pong');
 });
 
-app.use('/users', users);
+app.use('/usuarios', users);
+app.use('/tarifas', cost);
 
 app.listen(PORT, () => {
     console.log(`Server started on port ${PORT}`);
