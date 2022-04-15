@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "nombre": "Walking",
+        "modalidad": "cardio",
+        "duracion": 45,
+        "intensidad": "media",
+        "descripcion": "Actividad realizada sobre una máquina elíptica cuyo movimiento reprodu..."
+    },
+    {
+        "id": 2,
+        "nombre": "Ciclo",
+        "modalidad": "cardio",
+        "duracion": 45,
+        "intensidad": "alta",
+        "descripcion": "Actividad realizada sobre una bicicleta estática donde podrás subir y ..."
+    },
+    {
+        "id": 3,
+        "nombre": "For Training",
+        "modalidad": "aire libre",
+        "duracion": 50,
+        "intensidad": "media",
+        "descripcion": "Es un entrenamiento en grupo al aire libre con objetivos globales de m..."
+    },
+    {
+        "id": 4,
+        "nombre": "Body Combat",
+        "modalidad": "cardio",
+        "duracion": 50,
+        "intensidad": "alta",
+        "descripcion": "Programa de entrenamiento cardiovascular inspirado en las Artes Marcia..."
+    },
+    {
+        "id": 5,
+        "nombre": "Pilates",
+        "modalidad": "mental",
+        "duracion": 50,
+        "intensidad": "media",
+        "descripcion": "Método de entrenamiento basado en los principios de concentración, equ..."
+    },
+    {
+        "id": 6,
+        "nombre": "Yoga",
+        "modalidad": "mental",
+        "duracion": 50,
+        "intensidad": "baja",
+        "descripcion": "Disciplina basada en la meditación y el dominio del cuerpo, realizando..."
+    },
+    {
+        "id": 7,
+        "nombre": "Cross Training",
+        "modalidad": "tonificación",
+        "duracion": 50,
+        "intensidad": "alta",
+        "descripcion": "Entrenamiento que combina el desarrollo y mejora de todas las cualidad..."
+    },
+    {
+        "id": 8,
+        "nombre": "Body Pump",
+        "modalidad": "tonificación",
+        "duracion": 50,
+        "intensidad": "alta",
+        "descripcion": "Es una clase original con barra y discos que fortalece y tonifica todo..."
+    },
+    {
+        "id": 9,
+        "nombre": "Zumba",
+        "modalidad": "baile",
+        "duracion": 50,
+        "intensidad": "baja",
+        "descripcion": "Programa que mezcla el acondicionamiento físico y el entretenimiento a..."
+    }
+]

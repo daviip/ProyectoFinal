@@ -12,3 +12,12 @@ export interface ICost{
     nombre: string;
     precio: number;
 }
+
+export interface IClas{
+    id: number;
+    nombre: string;
+    modalidad: string;
+    duracion: number;
+    intensidad: string;
+    descripcion: string; 
+}

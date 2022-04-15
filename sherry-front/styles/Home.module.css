@@ -41,6 +41,7 @@
     justify-items: center;
     margin-left: 15rem;
     margin-right: 15rem;
+    margin-bottom: 10rem;
 }
 
 .box {
@@ -103,6 +104,9 @@
     box-shadow: 0px 0px 5px #00000029;
     font-size: 1rem;
     align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 .parainfo{
@@ -120,6 +124,23 @@
     margin: 2rem;
     margin-left: 25rem;
     margin-right: 25rem;
+    box-shadow: rgb(212, 0, 255) -5px 5px 10px;
+    padding: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin-bottom: 10rem;
+
+}
+
+.containerTable{
+    display: flex;
+    justify-content: center;
+}
+
+.table{
+    width: 75%;
+    text-align: center;
+    margin: 2rem;
     box-shadow: rgb(212, 0, 255) -5px 5px 10px;
     padding: 1rem;
     padding-left: 3rem;

@@ -6,7 +6,7 @@ export default function aviso() {
     return (
         <div>
             <Header />
-            <h1 className={ styles.title }>Política de cookies</h1>
+            <h1 className={ styles.title }>Aviso legal</h1>
             <hr className={ styles.separador } />
             <div className={ styles.informativa }>
                 <p>
