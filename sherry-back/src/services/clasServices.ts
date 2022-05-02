@@ -10,3 +10,5 @@ export const findClasById = (id: number): IClas | undefined => {
     return clase;
 }
 
+
+

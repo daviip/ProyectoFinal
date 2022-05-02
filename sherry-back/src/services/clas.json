@@ -3,72 +3,205 @@
         "id": 1,
         "nombre": "Walking",
         "modalidad": "cardio",
-        "duracion": 45,
         "intensidad": "media",
-        "descripcion": "Actividad realizada sobre una máquina elíptica cuyo movimiento reprodu..."
+        "descripcion": "Actividad realizada sobre una máquina elíptica cuyo movimiento reprodu...",
+        "horario": [
+            {
+                "dia": "Martes",
+                "hora": "12",
+                "reserva": []
+            },
+            {
+                "dia": "Miercoles",
+                "hora": "13",
+                "reserva": []
+            },
+            {
+                "dia": "Jueves",
+                "hora": "12",
+                "reserva": []
+            },
+            {
+                "dia": "Viernes",
+                "hora": "11",
+                "reserva": []
+            }
+        ]
     },
     {
         "id": 2,
         "nombre": "Ciclo",
         "modalidad": "cardio",
-        "duracion": 45,
         "intensidad": "alta",
-        "descripcion": "Actividad realizada sobre una bicicleta estática donde podrás subir y ..."
+        "descripcion": "Actividad realizada sobre una bicicleta estática donde podrás subir y ...",
+        "horario": [
+            {
+                "dia": "Lunes",
+                "hora": "9",
+                "reserva": []
+            },
+            {
+                "dia": "Martes",
+                "hora": "11",
+                "reserva": []
+            },
+            {
+                "dia": "Miercoles",
+                "hora": "9",
+                "reserva": []
+            },
+            {
+                "dia": "Viernes",
+                "hora": "9",
+                "reserva": []
+            }
+        ]
     },
     {
         "id": 3,
         "nombre": "For Training",
         "modalidad": "aire libre",
-        "duracion": 50,
         "intensidad": "media",
-        "descripcion": "Es un entrenamiento en grupo al aire libre con objetivos globales de m..."
+        "descripcion": "Es un entrenamiento en grupo al aire libre con objetivos globales de m...",
+        "horario": [
+            {
+                "dia": "Lunes",
+                "hora": "10",
+                "reserva": []
+            },
+            {
+                "dia": "Jueves",
+                "hora": "10",
+                "reserva": []
+            }
+        ]
     },
     {
         "id": 4,
         "nombre": "Body Combat",
         "modalidad": "cardio",
-        "duracion": 50,
         "intensidad": "alta",
-        "descripcion": "Programa de entrenamiento cardiovascular inspirado en las Artes Marcia..."
+        "descripcion": "Programa de entrenamiento cardiovascular inspirado en las Artes Marcia...",
+        "horario": [
+            {
+                "dia": "Lunes",
+                "hora": "11",
+                "reserva": []
+            },
+            {
+                "dia": "Martes",
+                "hora": "9",
+                "reserva": []
+            },
+            {
+                "dia": "Miercoles",
+                "hora": "10",
+                "reserva": []
+            },
+            {
+                "dia": "Jueves",
+                "hora": "9",
+                "reserva": []
+            },
+            {
+                "dia": "Viernes",
+                "hora": "13",
+                "reserva": []
+            }
+        ]
     },
     {
         "id": 5,
         "nombre": "Pilates",
         "modalidad": "mental",
-        "duracion": 50,
         "intensidad": "media",
-        "descripcion": "Método de entrenamiento basado en los principios de concentración, equ..."
+        "descripcion": "Método de entrenamiento basado en los principios de concentración, equ...",
+        "horario": [
+            {
+                "dia": "Martes",
+                "hora": "13",
+                "reserva": []
+            },
+            {
+                "dia": "Jueves",
+                "hora": "13",
+                "reserva": []
+            }
+        ]
     },
     {
         "id": 6,
         "nombre": "Yoga",
         "modalidad": "mental",
-        "duracion": 50,
         "intensidad": "baja",
-        "descripcion": "Disciplina basada en la meditación y el dominio del cuerpo, realizando..."
+        "descripcion": "Disciplina basada en la meditación y el dominio del cuerpo, realizando...",
+        "horario": [
+            {
+                "dia": "Lunes",
+                "hora": "12",
+                "reserva": []
+            },
+            {
+                "dia": "Miercoles",
+                "hora": "12",
+                "reserva": []
+            },
+            {
+                "dia": "Viernes",
+                "hora": "12",
+                "reserva": []
+            }
+        ]
     },
     {
         "id": 7,
         "nombre": "Cross Training",
         "modalidad": "tonificación",
-        "duracion": 50,
         "intensidad": "alta",
-        "descripcion": "Entrenamiento que combina el desarrollo y mejora de todas las cualidad..."
+        "descripcion": "Entrenamiento que combina el desarrollo y mejora de todas las cualidad...",
+        "horario": [
+            {
+                "dia": "Lunes",
+                "hora": "13",
+                "reserva": []
+            },
+            {
+                "dia": "Viernes",
+                "hora": "10",
+                "reserva": []
+            }
+        ]
     },
     {
         "id": 8,
         "nombre": "Body Pump",
         "modalidad": "tonificación",
-        "duracion": 50,
         "intensidad": "alta",
-        "descripcion": "Es una clase original con barra y discos que fortalece y tonifica todo..."
+        "descripcion": "Es una clase original con barra y discos que fortalece y tonifica todo...",
+        "horario": []
     },
     {
         "id": 9,
         "nombre": "Zumba",
         "modalidad": "baile",
-        "duracion": 50,
         "intensidad": "baja",
-        "descripcion": "Programa que mezcla el acondicionamiento físico y el entretenimiento a..."
+        "descripcion": "Programa que mezcla el acondicionamiento físico y el entretenimiento a...",
+        "horario": [
+            {
+                "dia": "Martes",
+                "hora": "10",
+                "reserva": []
+            },
+            {
+                "dia": "Miercoles",
+                "hora": "11",
+                "reserva": []
+            },
+            {
+                "dia": "Jueves",
+                "hora": "11",
+                "reserva": []
+            }
+        ]
     }
 ]

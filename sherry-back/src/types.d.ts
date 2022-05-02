@@ -7,17 +7,17 @@ export interface IUser {
     telefono: number;
 }
 
-export interface ICost{
+export interface ICost {
     id: number;
     nombre: string;
     precio: number;
 }
 
-export interface IClas{
+export interface IClas {
     id: number;
     nombre: string;
     modalidad: string;
-    duracion: number;
     intensidad: string;
-    descripcion: string; 
+    descripcion: string;
+    horario: { dia: string; hora: string; reserva: never[]; }[];
 }
