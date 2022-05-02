@@ -50,7 +50,7 @@
     box-shadow: #f2e2fa 0px 0px 5px;
     border-radius: 0.5rem;
     font-size: large;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
 .box:hover {
@@ -145,4 +145,53 @@
     padding: 1rem;
     padding-left: 3rem;
     padding-right: 3rem;
+}
+
+.containerClases{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 1rem;
+    row-gap: 1rem;
+    column-gap: 1rem;   
+    text-align: center;
+    margin-bottom: 10rem;
+}
+
+.porClases{
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem;
+}
+
+.login{
+    display: flex;
+    justify-content: right;
+    padding: 2rem;
+    margin: 1rem;
+}
+
+.loginB{
+    border: 1px solid rgb(212, 0, 255);
+    background-color: #f2e2fa;
+    border-radius: 0.5rem;
+    width: 7rem;
+    margin-right: 0.5rem;
+}
+
+.loginB:hover {
+    background-color: rgb(212, 0, 255);
+    color: #f2e2fa;
+}
+
+.inicio{
+    width: 30%;
+    margin-top: 2rem;
+    margin-inline: auto;
+    box-shadow: rgb(212, 0, 255) -5px 5px 10px;
+    padding: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin-bottom: 10rem;
+    text-align: center;
+
 }

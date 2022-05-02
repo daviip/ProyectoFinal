@@ -19,8 +19,8 @@ export const Prices = ({ data, all }) => {
                     tarifa3.map(item => (
                         <div className={ styles.box } key={ item.id }>
                             <Image src={ Logo } width={ 100 } height={ 90 } />
-                            <p>{ item.nombre }</p>
-                            <p>{ item.precio }€</p>
+                            <p><strong>{ item.nombre }</strong></p>
+                            <p><strong>{ item.precio }€</strong></p>
                         </div>
                     ))
                 }

@@ -7,7 +7,7 @@ export default function Listar({ data }) {
     const Lista = (data) => {
         data.map((c) => {
             c.horario.map((h) => {
-                console.log(`La clase ${c.nombre} se da el ${h.dia} a las ${h.hora}`);
+                // console.log(`La clase ${c.nombre} se da el ${h.dia} a las ${h.hora}`);
             })
         })
     }
