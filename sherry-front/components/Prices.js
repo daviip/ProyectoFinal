@@ -26,9 +26,7 @@ export const Prices = ({ data, all }) => {
                 }
 
             </div>
-            <div className={ styles.cen }>
-                <button className={ styles.button }>Ver todas las tarifas</button>
-            </div>
+            
         </div>
     )
 }

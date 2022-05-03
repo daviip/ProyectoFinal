@@ -1,53 +1,48 @@
-// import Image from "next/image";
-// import Link from "next/link";
-// import uno from "../public/slider/slider.webp";
-// import dos from "../public/slider/slider2.jpg";
-// import { Navigation, A11y, Autoplay } from "swiper";
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import "swiper/css";
-// import "swiper/css/navigation";
-// import "swiper/css/autoplay";
+import Image from "next/image";
+import Link from "next/link";
+import uno from "../public/slider/slider.webp";
+import dos from "../public/slider/slider2.jpg";
+import { Navigation, Autoplay, A11y } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import styles from "../styles/Home.module.css";
 
-// export const Slider = () => {
-//   const shippingcompanies = [
-//     {
-//       id: 1,
-//       image: uno,
-//       name: "Hombre",
-//     },
-//     {
-//       id: 2,
-//       image: dos,
-//       name: "Mujer",
-//     }
-//   ];
+export const Slider = () => {
+  const img = [
+    {
+      id: 1,
+      image: uno,
+      name: "Hombre",
+    },
+    {
+      id: 2,
+      image: dos,
+      name: "Mujer",
+    }
+  ];
 
   
 
-//   return (
-//     <Swiper
-//       modules={[Navigation, A11y, Autoplay]}
-//       spaceBetween={0}
-//       slidesPerView={1}
-//       navigation
-//       autoplay={{ delay: 5000 }}
-//       rewind={true}
-//     >
-//       {shippingcompanies.map((company) => (
-//         <SwiperSlide
-//           key={company.id}
-//         >
-//           <Link href="/">
-//             <a className="block relative w-40">
-//               <Image
-//                 src={company.image}
-//                 layout="fill"
-//                 alt={company.name}
-//               ></Image>
-//             </a>
-//           </Link>
-//         </SwiperSlide>
-//       ))}
-//     </Swiper>
-//   );
-// };
+  return (
+    <Swiper
+    modules={[Navigation, Autoplay, A11y]}
+      spaceBetween={0}
+      slidesPerView={1}
+      navigation
+      autoplay={{ delay: 5000 }}
+      rewind={true}
+    onSwiper={swiper => console.log(swiper)}
+    >
+        {img.map(item => (
+            <SwiperSlide key={item.id} className={styles.sli}>
+                <Link href={`/[id]`} as={`/${item.id}`}>
+                    <a>
+                        <Image src={item.image}  height={400} />
+                    </a>
+                </Link>
+            </SwiperSlide>
+        ))}
+    </Swiper>
+    );
+}
+

@@ -3,7 +3,7 @@ import { Header } from '../components/Header'
 import { Slider } from '../components/Slider'
 import { Prices } from '../components/Prices'
 import { Footer } from '../components/Footer'
-import {Clases} from '../components/Clases'
+import { Clases } from '../components/Clases'
 
 export default function Home({ datap, datac }) {
   return (
@@ -11,7 +11,13 @@ export default function Home({ datap, datac }) {
       <Header />
       <Slider />
       <Prices data={ datap } all={ false } />
+      <div className={ styles.cen }>
+        <button className={ styles.button }>Ver todas las tarifas</button>
+      </div>
       <Clases data={ datac } all={ false } />
+      <div className={ styles.cen }>
+        <button className={ styles.button }>Ver todas las clases</button>
+      </div>
       <Footer />
     </div>
   )

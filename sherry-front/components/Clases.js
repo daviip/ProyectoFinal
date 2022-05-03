@@ -31,9 +31,7 @@ export const Clases = ({ data, all }) => {
                     </div>
                 ) }
             </div>
-            <div className={ styles.cen }>
-                <button className={ styles.button }>Ver todas las clases</button>
-            </div>
+            
         </div>
     )
 }
