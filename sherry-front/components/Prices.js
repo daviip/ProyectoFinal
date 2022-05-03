@@ -13,7 +13,7 @@ export const Prices = ({ data, all }) => {
     return (
         <div>
             <h1 className={ styles.title }>Tarifas</h1>
-            <hr className={styles.separador}/>
+            <hr className={ styles.separador } />
             <div className={ styles.prices }>
                 {
                     tarifa3.map(item => (
@@ -24,6 +24,10 @@ export const Prices = ({ data, all }) => {
                         </div>
                     ))
                 }
+
+            </div>
+            <div className={ styles.cen }>
+                <button className={ styles.button }>Ver todas las tarifas</button>
             </div>
         </div>
     )

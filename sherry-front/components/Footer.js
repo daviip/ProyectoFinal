@@ -18,16 +18,16 @@ export const Footer = () => {
             </div>
             <div className={ styles.interes }>
                 <div>
-                    <Link href="/normativa-del-centro">Normativa del centro</Link>
+                    <Link href="/lopd/normativa-del-centro">Normativa del centro</Link>
                 </div>
                 <div>
-                    <Link href="/politica-de-privacidad">Politica de privacidad</Link>
+                    <Link href="/lopd/politica-de-privacidad">Politica de privacidad</Link>
                 </div>
                 <div>
-                    <Link href="/politica-de-cookies">Politica de cookies</Link>
+                    <Link href="/lopd/politica-de-cookies">Politica de cookies</Link>
                 </div>
                 <div>
-                    <Link href="/aviso-legal">Aviso legal</Link>
+                    <Link href="/lopd/aviso-legal">Aviso legal</Link>
                 </div>
             </div>
         </div>

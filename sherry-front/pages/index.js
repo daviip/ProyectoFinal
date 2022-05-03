@@ -3,16 +3,15 @@ import { Header } from '../components/Header'
 import { Slider } from '../components/Slider'
 import { Prices } from '../components/Prices'
 import { Footer } from '../components/Footer'
+import {Clases} from '../components/Clases'
 
-export default function Home({ data }) {
+export default function Home({ datap, datac }) {
   return (
     <div>
       <Header />
       <Slider />
-      <Prices data={ data } all={ false } />
-      <div className={ styles.cen }>
-        <button className={ styles.button }>Ver todas las tarifas</button>
-      </div>
+      <Prices data={ datap } all={ false } />
+      <Clases data={ datac } all={ false } />
       <Footer />
     </div>
   )
@@ -20,7 +19,9 @@ export default function Home({ data }) {
 
 
 export async function getServerSideProps(context) {
-  const res = await fetch('http://localhost:5000/tarifas')
-  const data = await res.json()
-  return { props: { data } }
+  const resp = await fetch('http://localhost:5000/tarifas')
+  const resc = await fetch('http://localhost:5000/clases')
+  const datap = await resp.json()
+  const datac = await resc.json()
+  return { props: { datap, datac } }
 }

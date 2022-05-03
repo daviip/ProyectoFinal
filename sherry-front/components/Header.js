@@ -23,9 +23,6 @@ export const Header = () => {
                 <div className={ styles.navegator }>
                     <Link href="/horarios">Horarios</Link>
                 </div>
-                <div className={ styles.navegator }>
-                    <Link href="/informacion">Información</Link>
-                </div>
             </div>
             <div className={ styles.login }>
                 { isLoggedIn ?

@@ -8,11 +8,7 @@ export default function clases({ data }) {
     return (
         <div>
             <Header />
-            <h1 className={ styles.title }>Clases</h1>
-            <hr className={ styles.separador } />
-            <div className={ styles.containerTable }>
-                <Clases data={ data }/>
-            </div>
+                <Clases data={ data } all={true}/>
             <Footer />
         </div>
     )
