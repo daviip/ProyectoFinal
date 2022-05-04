@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import uno from "../public/slider/slider.webp";
 import dos from "../public/slider/slider2.jpg";
+import tres from "../public/slider/slider3.jpg";
+import cuatro from "../public/slider/slider4.jpg";
 import { Navigation, Autoplay, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -17,6 +19,16 @@ export const Slider = () => {
     {
       id: 2,
       image: dos,
+      name: "Mujer",
+    }, 
+    {
+      id: 3,
+      image: tres,
+      name: "Hombre",
+    },
+    {
+      id: 4,
+      image: cuatro,
       name: "Mujer",
     }
   ];
@@ -36,7 +48,7 @@ export const Slider = () => {
             <SwiperSlide key={item.id} className={styles.sli}>
                 <Link href={`/[id]`} as={`/${item.id}`}>
                     <a>
-                        <Image src={item.image}  height={400} />
+                        <Image src={item.image}  height={400} width={1000}/>
                     </a>
                 </Link>
             </SwiperSlide>

@@ -11,13 +11,10 @@ export default function Home({ datap, datac }) {
       <Header />
       <Slider />
       <Prices data={ datap } all={ false } />
-      <div className={ styles.cen }>
+      {/* <div className={ styles.cen }>
         <button className={ styles.button }>Ver todas las tarifas</button>
-      </div>
+      </div> */}
       <Clases data={ datac } all={ false } />
-      <div className={ styles.cen }>
-        <button className={ styles.button }>Ver todas las clases</button>
-      </div>
       <Footer />
     </div>
   )
