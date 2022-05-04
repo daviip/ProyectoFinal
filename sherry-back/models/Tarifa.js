@@ -1,5 +1,8 @@
-var TarifaSchema = mongoose.Schema({
-  _id: mongoose.Schema.Types.ObjectId,
+var mongoose = require("mongoose");
+var Schema = mongoose.Schema;
+
+var TarifaSchema = new Schema({
+  _id: {type: Schema.Types.ObjectId, auto: true},
   nombre: {
     type: String,
     required: true,
@@ -10,4 +13,4 @@ var TarifaSchema = mongoose.Schema({
   },
 });
 
-var Tarifa = mongoose.model("Tarifa", TarifaSchema);
+module.exports = mongoose.model("Tarifa", TarifaSchema);
