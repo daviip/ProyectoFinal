@@ -34,8 +34,7 @@ var UserSchema =  new Schema({
     required: true,
   },
   tarifa: {
-    type: Schema.Types.ObjectId,
-    ref: "Tarifa",
+    type: String,
     required: true,
   }
 });
@@ -61,18 +60,3 @@ UserSchema.methods.comparePassword = function(cadidatePassword, cb){
 };
 
 module.exports = mongoose.model("User", UserSchema);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var User = mongoose.model("User", userSchema);
