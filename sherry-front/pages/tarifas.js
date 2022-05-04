@@ -13,7 +13,7 @@ export default function Tarifas({ data }) {
 }
 
 export async function getServerSideProps(context) {
-  const res = await fetch('http://localhost:5000/tarifas')
+  const res = await fetch('http://localhost:5000/tarifas/all')
   const data = await res.json()
   return { props: { data } }
 }

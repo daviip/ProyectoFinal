@@ -25,8 +25,8 @@ export default function Home({ datap, datac }) {
 
 
 export async function getServerSideProps(context) {
-  const resp = await fetch('http://localhost:5000/tarifas')
-  const resc = await fetch('http://localhost:5000/clases')
+  const resp = await fetch('http://localhost:5000/tarifas/all')
+  const resc = await fetch('http://localhost:5000/clases/all')
   const datap = await resp.json()
   const datac = await resc.json()
   return { props: { datap, datac } }

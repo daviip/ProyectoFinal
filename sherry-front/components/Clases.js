@@ -1,12 +1,11 @@
 import styles from '../styles/Home.module.css'
 import Image from 'next/image'
-import i1 from '../public/imagesC/1.jpg'
+import i1 from '/public/imagesC/1.jpg'
 import Link from 'next/link'
 
 
 
 export const Clases = ({ data, all }) => {
-
 
     if (all) {
         clases3 = data
@@ -20,10 +19,10 @@ export const Clases = ({ data, all }) => {
             <hr className={ styles.separador } />
             <div className={ styles.prices }>
                 { clases3.map((c) =>
-                    <div className={ styles.box }>
-                        <Link href={ "/[id]" } as={ `/${ c.id }` } key={ c.id } >
+                    <div className={ styles.box } key={ c._id } >
+                        <Link href={ "/[id]" } as={ `/${ c._id }` } >
                             <a>
-                                <Image src={ i1 } width={ 200 } height={ 200 } />
+                                <Image src= {i1}  width={ 200 } height={ 200 } />
                                 <h2>{ c.nombre }</h2>
                                 {/* <p>{ c.descripcion }</p> */ }
                             </a>

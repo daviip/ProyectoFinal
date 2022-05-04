@@ -19,7 +19,7 @@ export default function horarios({ data }) {
 }
 
 export async function getServerSideProps(context) {
-    const res = await fetch('http://localhost:5000/clases')
+    const res = await fetch('http://localhost:5000/clases/all')
     const data = await res.json()
     return { props: { data } }
 }

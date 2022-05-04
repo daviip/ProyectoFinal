@@ -17,16 +17,14 @@ export const Prices = ({ data, all }) => {
             <div className={ styles.prices }>
                 {
                     tarifa3.map(item => (
-                        <div className={ styles.box } key={ item.id }>
+                        <div className={ styles.box } key={ item._id }>
                             <Image src={ Logo } width={ 100 } height={ 90 } />
                             <p><strong>{ item.nombre }</strong></p>
                             <p><strong>{ item.precio }€</strong></p>
                         </div>
                     ))
                 }
-
             </div>
-            
         </div>
     )
 }

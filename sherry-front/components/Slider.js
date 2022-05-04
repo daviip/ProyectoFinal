@@ -31,7 +31,6 @@ export const Slider = () => {
       navigation
       autoplay={{ delay: 5000 }}
       rewind={true}
-    onSwiper={swiper => console.log(swiper)}
     >
         {img.map(item => (
             <SwiperSlide key={item.id} className={styles.sli}>

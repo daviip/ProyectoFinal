@@ -4,10 +4,7 @@ import styles from '../styles/Home.module.css'
 import Image from 'next/image'
 import i1 from '../public/imagesC/1.jpg'
 
-
-
 export default function Class({ data, nombre }) {
-
     if (!data) {
         return <div>loading...</div>
     } else {
@@ -38,7 +35,6 @@ export default function Class({ data, nombre }) {
 export async function getServerSideProps(context) {
     const { params } = context
     const { id } = params
-    console.log(params)
     const res = await fetch('http://localhost:5000/clases/' + id)
     const data = await res.json()
     return { props: { data } }
