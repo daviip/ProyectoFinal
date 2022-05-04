@@ -20,7 +20,7 @@ export const Slider = () => {
       id: 2,
       image: dos,
       name: "Mujer",
-    }, 
+    },
     {
       id: 3,
       image: tres,
@@ -30,30 +30,27 @@ export const Slider = () => {
       id: 4,
       image: cuatro,
       name: "Mujer",
-    }
+    },
   ];
-
-  
 
   return (
     <Swiper
-    modules={[Navigation, Autoplay, A11y]}
+      modules={[Navigation, Autoplay, A11y]}
       spaceBetween={0}
       slidesPerView={1}
       navigation
       autoplay={{ delay: 5000 }}
       rewind={true}
     >
-        {img.map(item => (
-            <SwiperSlide key={item.id} className={styles.sli}>
-                <Link href={`/[id]`} as={`/${item.id}`}>
-                    <a>
-                        <Image src={item.image}  height={400} width={1000}/>
-                    </a>
-                </Link>
-            </SwiperSlide>
-        ))}
+      {img.map((item) => (
+        <SwiperSlide key={item.id} className={styles.sli}>
+          <Link href={`/[id]`} as={`/${item.id}`}>
+            <a>
+              <Image src={item.image} height={400} width={1000} />
+            </a>
+          </Link>
+        </SwiperSlide>
+      ))}
     </Swiper>
-    );
-}
-
+  );
+};
