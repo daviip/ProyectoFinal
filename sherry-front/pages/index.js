@@ -5,7 +5,6 @@ import { Footer } from "../components/Footer";
 import { Clases } from "../components/Clases";
 
 export default function Home({ datap, datac }) {
-  // console.log(window.localStorage.getItem("token"));
   return (
     <div>
       <Header />

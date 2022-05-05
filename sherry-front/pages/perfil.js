@@ -1,6 +1,7 @@
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { useEffect, useState } from "react";
+import { PerfilUser } from "../components/PerfilUser";
 
 export default function Perfil() {
   const [token, setToken] = useState("");
@@ -33,7 +34,7 @@ export default function Perfil() {
   return (
     <div>
       <Header />
-      <h1>{user.nombre}</h1>
+        <PerfilUser user={user} />
       <Footer />
     </div>
   );

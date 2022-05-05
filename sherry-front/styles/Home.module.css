@@ -200,3 +200,10 @@
 .sli {
   text-align: center;
 }
+
+.perfil {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 20rem;
+  margin-right: 10rem;
+}
