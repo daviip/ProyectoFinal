@@ -9,7 +9,7 @@ router.get("/", function (req, res, next) {
 });
 
 // Mostrar todos los usuarios
-router.post("/all", function (req, res, next) {
+router.get("/all", function (req, res, next) {
   User.find({}, function (err, users) {
     if (err) return next(err);
     res.json(users);
