@@ -4,7 +4,7 @@ import Link from "next/link";
 import styles from "../styles/Home.module.css";
 
 export const Header = () => {
-  let isLoggedIn = true;
+  let isLoggedIn = false;
   return (
     <div className={styles.containerHeader}>
       <div className={styles.image}>
@@ -27,17 +27,17 @@ export const Header = () => {
       <div className={styles.login}>
         {isLoggedIn ? (
           <>
-            <Link href="/inicio">
-              <button className={styles.loginB}>Iniciar sesion</button>
-            </Link>
-          </>
-        ) : (
-          <>
             <Link href="/perfil">
               <button className={styles.loginB}>Mi perfil</button>
             </Link>
             <Link href="/cerrarSesion">
               <button className={styles.loginB}>Cerrar sesion</button>
+            </Link>
+          </>
+        ) : (
+          <>
+            <Link href="/inicio">
+              <button className={styles.loginB}>Iniciar sesion</button>
             </Link>
           </>
         )}
