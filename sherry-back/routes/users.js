@@ -1,6 +1,7 @@
 var express = require("express");
 var router = express.Router();
 var User = require("../models/user");
+var bcrypt = require("bcryptjs");
 
 /* GET users listing. */
 router.get("/", function (req, res, next) {
@@ -8,7 +9,7 @@ router.get("/", function (req, res, next) {
 });
 
 // Mostrar todos los usuarios
-router.get("/all", function (req, res, next) {
+router.post("/all", function (req, res, next) {
   User.find({}, function (err, users) {
     if (err) return next(err);
     res.json(users);
@@ -24,7 +25,7 @@ router.get("/:id", function (req, res, next) {
 });
 
 // Crear un nuevo usuario
-router.post("/register", function (req, res, next) {
+router.post("/add", function (req, res, next) {
   if (req.body.lengtg == 0) return;
   const { nombre, apellido, edad, dni, telefono, email, password, tarifa } =
     req.body;
@@ -49,17 +50,25 @@ router.post("/register", function (req, res, next) {
 // Login un usuario
 router.post("/login", function (req, res, next) {
   const { dni, password } = req.body;
-  User.findOne({ dni }).then((user) => {
-    if (!user) return res.status(404).send("User not found");
+  User.findOne({ dni }).then((u) => {
+    if (!u) return res.status(404).send("User not found");
 
-    user.comparePassword(password, (err, isMatch) => {
+    u.comparePassword(password, (err, isMatch) => {
       if (err) return res.status(500).send(err);
       if (!isMatch) return res.status(401).send("Incorrect password");
 
-      User.findOne({ dni }).then((user) => {
-        res.json(user);
+      User.findOne({ dni }).then((u) => {
+        res.json(u);
       });
     });
+  });
+});
+
+// Eliminar usuario
+router.delete("/:id", function (req, res, next) {
+  User.findByIdAndRemove(req.params.id, req.body, function (err, user) {
+    if (err) return next(err);
+    res.json(user);
   });
 });
 
