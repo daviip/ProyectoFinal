@@ -3,7 +3,7 @@ import Image from "next/image";
 import User from "../public/usuario.jpg";
 
 export const PerfilUser = ({ user }) => {
-    user.reservas === undefined ? (user.reservas = 'No tienes reservas aún') : (user.reservas = user.reservas);
+    // user.reservas === undefined ? (user.reservas = 'No tienes reservas aún') : (user.reservas = user.reservas);
   console.log(user.reservas);
   return (
     <div>
