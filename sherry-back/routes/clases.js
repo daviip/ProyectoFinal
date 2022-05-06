@@ -26,5 +26,22 @@ router.get("/:nombre", function (req, res) {
   });
 });
 
+// Crear una nueva clase
+router.post("/add", function (req, res) {
+  if (req.body.length == 0) return;
+  const { nombre, descripcion, precio, horario } = req.body;  
+  Clase.create(
+    {
+      nombre,
+      descripcion,
+      precio,
+      horario,
+    },
+    (err, clase) => {
+      if (err) return res.status(500).send(err);
+      res.json(clase);
+    }
+  );
+});
 
 module.exports = router;

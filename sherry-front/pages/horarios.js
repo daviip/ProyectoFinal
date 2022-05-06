@@ -6,9 +6,9 @@ import { backend } from "../public/backend";
 import { useEffect, useState } from "react";
 
 export default function horarios({ data }) {
+  const [isLogged, setIsLogged] = useState(false);
   const [clase, setClase] = useState("");
   const [dia, setDia] = useState("");
-  const [hora, setHora] = useState("");
   let horarios = [];
 
   // Obtiene horarios
@@ -18,7 +18,16 @@ export default function horarios({ data }) {
     }
   });
 
-  return (
+  // Envia datos al servidor
+  const sendData =  (clase, dia) => {}
+
+  useEffect(() => {
+    window.localStorage.getItem("token")
+      ? setIsLogged(true)
+      : setIsLogged(false);
+  }, [isLogged]);
+
+  return isLogged ? (
     <div>
       <Header />
       <h1 className={styles.title}>Horarios</h1>
@@ -54,10 +63,20 @@ export default function horarios({ data }) {
               </option>
             ))}
           </select>
-          <button type="submit" className={styles.selectB}>
+          <button type="submit" className={styles.selectB} onClick={sendData(clase, dia)}>
             Agregar
           </button>
         </form>
+      </div>
+      <Footer />
+    </div>
+  ) : (
+    <div>
+      <Header />
+      <h1 className={styles.title}>Horarios</h1>
+      <hr className={styles.separador} />
+      <div className={styles.containerTable}>
+        <Listar data={data} />
       </div>
       <Footer />
     </div>

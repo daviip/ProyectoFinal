@@ -183,6 +183,7 @@
 .loginB:hover {
   background-color: rgb(212, 0, 255);
   color: #f2e2fa;
+  cursor: pointer;
 }
 
 .inicio {
@@ -249,8 +250,3 @@
   background-color: #f2e2fa;
   color: rgb(212, 0, 255);
 }
-
-/* .option:hover {
-  background-color: rgb(212, 0, 255);
-  color: #f2e2fa;
-} */
