@@ -3,6 +3,7 @@ import { Slider } from "../components/Slider";
 import { Prices } from "../components/Prices";
 import { Footer } from "../components/Footer";
 import { Clases } from "../components/Clases";
+import { backend } from "../public/backend";
 
 export default function Home({ datap, datac }) {
   return (
@@ -17,8 +18,8 @@ export default function Home({ datap, datac }) {
 }
 
 export async function getServerSideProps(context) {
-  const resp = await fetch("http://localhost:5000/tarifas/all");
-  const resc = await fetch("http://localhost:5000/clases/all");
+  const resp = await fetch(backend + "/tarifas/all");
+  const resc = await fetch(backend + "/clases/all");
   const datap = await resp.json();
   const datac = await resc.json();
   return { props: { datap, datac } };

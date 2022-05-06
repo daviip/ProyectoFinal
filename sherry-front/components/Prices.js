@@ -1,6 +1,7 @@
 import styles from "../styles/Home.module.css";
 import Logo from "../public/logo.png";
 import Image from "next/image";
+import Link from "next/link";
 
 export const Prices = ({ data, all }) => {
   if (all) {
@@ -27,9 +28,11 @@ export const Prices = ({ data, all }) => {
         ))}
       </div>
       {all == false ? (
+        <Link href={"/tarifas"}>
         <div className={styles.cen}>
           <button className={styles.button}>Ver todas los precios</button>
         </div>
+        </Link>
       ) : null}
     </div>
   );

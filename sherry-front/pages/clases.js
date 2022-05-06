@@ -1,6 +1,7 @@
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { Clases } from "../components/Clases";
+import { backend } from "../public/backend";
 
 export default function clases({ data }) {
   return (
@@ -13,7 +14,7 @@ export default function clases({ data }) {
 }
 
 export async function getServerSideProps(context) {
-  const res = await fetch("http://localhost:5000/clases/all");
+  const res = await fetch(backend + "/clases/all");
   const data = await res.json();
   return { props: { data } };
 }

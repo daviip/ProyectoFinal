@@ -47,9 +47,11 @@ export const Clases = ({ data, all }) => {
         ))}
       </div>
       {all == false ? (
-        <div className={styles.cen}>
-          <button className={styles.button}>Ver todas las clases</button>
-        </div>
+        <Link href={"/clases"}>
+          <div className={styles.cen}>
+            <button className={styles.button}>Ver todas las clases</button>
+          </div>
+        </Link>
       ) : null}
     </div>
   );

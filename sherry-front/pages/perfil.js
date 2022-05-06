@@ -2,6 +2,7 @@ import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { useEffect, useState } from "react";
 import { PerfilUser } from "../components/PerfilUser";
+import { backend } from "../public/backend";
 
 export default function Perfil() {
   const [token, setToken] = useState("");
@@ -13,7 +14,7 @@ export default function Perfil() {
 
   useEffect(() => {
     if (token) {
-      fetch("http://localhost:5000/users/"+token, {
+      fetch(backend + "/users/" + token, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -34,7 +35,7 @@ export default function Perfil() {
   return (
     <div>
       <Header />
-        <PerfilUser user={user} />
+      <PerfilUser user={user} />
       <Footer />
     </div>
   );

@@ -1,6 +1,7 @@
 import { Header } from "../components/Header";
 import { Prices } from "../components/Prices";
 import { Footer } from "../components/Footer";
+import { backend } from "../public/backend";
 
 export default function Tarifas({ data }) {
   return (
@@ -13,7 +14,7 @@ export default function Tarifas({ data }) {
 }
 
 export async function getServerSideProps(context) {
-  const res = await fetch("http://localhost:5000/tarifas/all");
+  const res = await fetch(backend + "/tarifas/all");
   const data = await res.json();
   return { props: { data } };
 }

@@ -2,6 +2,7 @@ import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import styles from "../styles/Home.module.css";
 import { useState } from "react";
+import { backend } from "../public/backend";
 
 export default function Inicio() {
   const [dni, setDni] = useState("");
@@ -9,7 +10,7 @@ export default function Inicio() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch("http://localhost:5000/users/login", {
+    fetch(backend + "/users/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
