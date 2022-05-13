@@ -4,7 +4,7 @@ import User from "../public/usuario.jpg";
 
 export const PerfilUser = ({ user }) => {
     // user.reservas === undefined ? (user.reservas = 'No tienes reservas aún') : (user.reservas = user.reservas);
-  console.log(user.reservas);
+  // console.log(user.reservas);
   return (
     <div>
       <h1 className={styles.title}>

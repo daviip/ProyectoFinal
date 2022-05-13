@@ -28,17 +28,15 @@ router.get("/:nombre", function (req, res) {
 
 // Añade una reserva en un horario de una clase
 router.post("/reserva/:nombre", function (req, res) {
+  const { token, dia } = req.body;
   Clase.findOne({ nombre: req.params.nombre }, function (err, clase) {
     if (err)
       return res.status(500).send({ message: "Error al realizar la petición" });
     if (!clase) return res.status(404).send({ message: "La clase no existe" });
     clase.horario.map((horario) => {
-      if (horario.dia == "Martes") {
+      if (horario.dia == dia) {
         horario.reserva.push(
-          "persona" +
-            Math.floor(Math.random() * 100) +
-            " " +
-            Math.floor(Math.random() * 100)
+          token
         );
       }
     });

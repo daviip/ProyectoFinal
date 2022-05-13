@@ -4,28 +4,53 @@ import styles from "../styles/Home.module.css";
 import Listar from "../components/Listar";
 import { backend } from "../public/backend";
 import { useEffect, useState } from "react";
+// import { sendData } from "../components/SendData";
 
 export default function horarios({ data }) {
   const [isLogged, setIsLogged] = useState(false);
+  const [token, setToken] = useState("");
   const [clase, setClase] = useState("");
   const [dia, setDia] = useState("");
   let horarios = [];
 
   // Obtiene horarios
   data.find((item) => {
-    if (item._id === clase) {
+    if (item.nombre === clase) {
       horarios = item.horario;
     }
   });
 
-  // Envia datos al servidor
-  const sendData =  (clase, dia) => {}
-
   useEffect(() => {
+    setToken(localStorage.getItem("token"));
     window.localStorage.getItem("token")
       ? setIsLogged(true)
       : setIsLogged(false);
-  }, [isLogged]);
+  }, [isLogged, token]);
+
+  const reservar = (clase, dia) => {
+    console.log(clase, dia, token);
+    if (clase && dia) {
+      fetch(backend + "/clases/reserva/" + clase, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({
+          dia: dia,
+          token: token,
+        }),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.error) {
+            console.log(data.error);
+          } else {
+            console.log("Reserva realizada");
+          }
+        });
+    }
+  };
 
   return isLogged ? (
     <div>
@@ -45,7 +70,11 @@ export default function horarios({ data }) {
           >
             <option value="">Selecciona</option>
             {data.map((item) => (
-              <option value={item._id} key={item._id} className={styles.option}>
+              <option
+                value={item.nombre}
+                key={item._id}
+                className={styles.option}
+              >
                 {item.nombre}
               </option>
             ))}
@@ -63,7 +92,12 @@ export default function horarios({ data }) {
               </option>
             ))}
           </select>
-          <button type="submit" className={styles.selectB} onClick={sendData(clase, dia)}>
+          <button
+            type="submit"
+            className={styles.selectB}
+            // onClick={() => reservar(clase, dia)}
+            onClick={reservar(clase, dia)}
+          >
             Agregar
           </button>
         </form>
