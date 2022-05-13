@@ -26,22 +26,30 @@ router.get("/:nombre", function (req, res) {
   });
 });
 
-// Crear una nueva clase
-router.post("/add", function (req, res) {
-  if (req.body.length == 0) return;
-  const { nombre, descripcion, precio, horario } = req.body;  
-  Clase.create(
-    {
-      nombre,
-      descripcion,
-      precio,
-      horario,
-    },
-    (err, clase) => {
-      if (err) return res.status(500).send(err);
+// Añade una reserva en un horario de una clase
+router.post("/reserva/:nombre", function (req, res) {
+  Clase.findOne({ nombre: req.params.nombre }, function (err, clase) {
+    if (err)
+      return res.status(500).send({ message: "Error al realizar la petición" });
+    if (!clase) return res.status(404).send({ message: "La clase no existe" });
+    clase.horario.map((horario) => {
+      if (horario.dia == "Martes") {
+        horario.reserva.push(
+          "persona" +
+            Math.floor(Math.random() * 100) +
+            " " +
+            Math.floor(Math.random() * 100)
+        );
+      }
+    });
+    clase.save(function (err, clase) {
+      if (err)
+        return res
+          .status(500)
+          .send({ message: "Error al realizar la petición" });
       res.json(clase);
-    }
-  );
+    });
+  });
 });
 
 module.exports = router;

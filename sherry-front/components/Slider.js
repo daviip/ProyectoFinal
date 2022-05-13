@@ -44,11 +44,11 @@ export const Slider = () => {
     >
       {img.map((item) => (
         <SwiperSlide key={item.id} className={styles.sli}>
-          <Link href={`/[id]`} as={`/${item.id}`}>
+          {/* <Link href={`/[id]`} as={`/${item.id}`}> */}
             <a>
               <Image src={item.image} height={400} width={1000} />
             </a>
-          </Link>
+          {/* </Link> */}
         </SwiperSlide>
       ))}
     </Swiper>

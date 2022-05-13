@@ -12,7 +12,6 @@ import BodyPump from "../public/imagesC/8.jpg";
 import Zumba from "../public/imagesC/9.jpg";
 
 let img = [
-  Walking,
   Ciclo,
   ForTraining,
   BodyCombat,
@@ -21,6 +20,7 @@ let img = [
   CrossTraining,
   BodyPump,
   Zumba,
+  Walking,
 ];
 
 export const Clases = ({ data, all }) => {

@@ -25,11 +25,7 @@ var ClaseSchema = new Schema({
         type: String,
         required: true,
       },
-      reserva: [
-        {
-          _id: { type: Schema.Types.ObjectId },
-        },
-      ],
+      reserva: [],
     },
   ],
 });
