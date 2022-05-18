@@ -72,4 +72,37 @@ router.delete("/:id", function (req, res, next) {
   });
 });
 
+// Añade una reserva
+router.put("/:id/reservas", function (req, res, next) {
+  User.findByIdAndUpdate(
+    req.params.id,
+    { $push: { reservas: req.body } },
+    function (err, user) {
+      if (err) return next(err);
+      res.json(user);
+    }
+  );
+});
+
+router.post("/reserva/:id", function (req, res) {
+  const { clase, dia } = req.body;
+  User.findById(req.params.id, function (err, user) {
+    if (err)
+      return res.status(500).send({ message: "Error al realizar la petición" });
+    if (!user) return res.status(404).send({ message: "El usuario no existe" });
+    user.reservas.map((reserva) => {
+      if (reserva.clase == clase && reserva.dia == dia) {
+        return res.status(500).send({ message: "La clase ya está reservada" });
+      }
+    });
+    user.reservas.push({ clase, dia });
+    user.save((err, user) => {
+      if (err)
+        return res.status(500).send({ message: "Error al realizar la petición" });
+      return res.status(200).send({ message: "Reserva realizada correctamente" });
+    });
+  });
+});
+
+
 module.exports = router;

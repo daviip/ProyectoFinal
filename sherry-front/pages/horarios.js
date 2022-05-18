@@ -30,6 +30,26 @@ export default function Horarios({ data }) {
   const reservar = (clase, dia) => {
     console.log(clase, dia, token);
     if (clase && dia) {
+      fetch(backend + "/users/reserva/"+token, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json", 
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({
+          clase: clase,
+          dia: dia,
+        }),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.error) {
+            console.log(data.error);
+          } else {
+            console.log("Reserva realizada");
+          }
+        });
+    
       fetch(backend + "/clases/reserva/" + clase, {
         method: "POST",
         headers: {
@@ -86,7 +106,7 @@ export default function Horarios({ data }) {
           >
             <option value="">Selecciona</option>
             {horarios.map((item) => (
-              <option value={item.dia} key={item.dia} className={styles.option}>
+              <option value={item.dia + " a las " + item.hora + ":00"} key={item.dia} className={styles.option}>
                 {item.dia} a las {item.hora}:00
               </option>
             ))}

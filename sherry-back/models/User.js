@@ -36,6 +36,10 @@ var UserSchema =  new Schema({
   tarifa: {
     type: String,
     required: true,
+  },
+  reservas: {
+    type: Array,
+    required: false,
   }
 });
 
