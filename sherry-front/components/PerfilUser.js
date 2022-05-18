@@ -3,13 +3,10 @@ import Image from "next/image";
 import User from "../public/usuario.jpg";
 
 export const PerfilUser = ({ user }) => {
-  let reservase = [];
-  user.reservas === []
-    ? (reservase = ["No tienes reservas aún"])
-    : (reservase = user.reservas);
+    // user.reservas === undefined ? (user.reservas = 'No tienes reservas aún') : (user.reservas = user.reservas);
+  // console.log(user.reservas);
   return (
     <div>
-      {/* {console.log(reservas)} */}
       <h1 className={styles.title}>
         {user.nombre} {user.apellido}
       </h1>
@@ -19,10 +16,7 @@ export const PerfilUser = ({ user }) => {
           <h3>Correo: {user.email}</h3>
           <h3>Telefono: {user.telefono}</h3>
           <h3>Tarifa: {user.tarifa}</h3>
-          <h3>
-            Reservas:
-            {console.log(reservase)}
-          </h3>
+          <h3> Reservas: {user.reservas}</h3>
         </div>
         <div>
           <Image src={User} width={200} height={200} alt="user" />
