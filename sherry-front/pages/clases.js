@@ -3,7 +3,7 @@ import { Footer } from "../components/Footer";
 import { Clases } from "../components/Clases";
 import { backend } from "../public/backend";
 
-export default function clases({ data }) {
+export default function Clase({ data }) {
   return (
     <div>
       <Header />

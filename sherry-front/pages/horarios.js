@@ -6,7 +6,7 @@ import { backend } from "../public/backend";
 import { useEffect, useState } from "react";
 // import { sendData } from "../components/SendData";
 
-export default function horarios({ data }) {
+export default function Horarios({ data }) {
   const [isLogged, setIsLogged] = useState(false);
   const [token, setToken] = useState("");
   const [clase, setClase] = useState("");
@@ -61,7 +61,6 @@ export default function horarios({ data }) {
         <Listar data={data} />
       </div>
       <div className={styles.containerForm}>
-        <form>
           <select
             name="clases"
             defaultValue={"Selecciona"}
@@ -95,12 +94,10 @@ export default function horarios({ data }) {
           <button
             type="submit"
             className={styles.selectB}
-            // onClick={() => reservar(clase, dia)}
-            onClick={reservar(clase, dia)}
+            onClick={() => reservar(clase, dia)}
           >
             Agregar
           </button>
-        </form>
       </div>
       <Footer />
     </div>

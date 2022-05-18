@@ -4,8 +4,16 @@ import { Prices } from "../components/Prices";
 import { Footer } from "../components/Footer";
 import { Clases } from "../components/Clases";
 import { backend } from "../public/backend";
+import { useEffect } from "react";
 
 export default function Home({ datap, datac }) {
+
+  // useEffect(() => {
+  //   window.onbeforeunload = () => {
+  //     window.localStorage.removeItem("token");
+  //   };
+  // }, []);
+
   return (
     <div>
       <Header />
