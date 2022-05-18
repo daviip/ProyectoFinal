@@ -50,6 +50,10 @@ export default function Horarios({ data }) {
           }
         });
     }
+    // Reiniciar la pagina despues de 10 segundos
+    setTimeout(() => {
+    window.location.reload();
+    }, 2000);
   };
 
   return isLogged ? (
