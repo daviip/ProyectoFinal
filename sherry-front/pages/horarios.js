@@ -56,6 +56,12 @@ export default function Horarios({ data }) {
     }, 2000);
   };
 
+  const pregunta = (clase, dia) => {
+    if(confirm("¿Estas seguro de querer reservar una clase de " + clase + " el " + dia +"?")) {
+      reservar(clase, dia);
+    }
+  };
+
   return isLogged ? (
     <div>
       <Header />
@@ -98,7 +104,7 @@ export default function Horarios({ data }) {
           <button
             type="submit"
             className={styles.selectB}
-            onClick={() => reservar(clase, dia)}
+            onClick={() => pregunta(clase, dia)}
           >
             Agregar
           </button>
