@@ -52,14 +52,39 @@ export default function Horarios({ data }) {
     }
     // Reiniciar la pagina despues de 10 segundos
     setTimeout(() => {
-    window.location.reload();
+      window.location.reload();
     }, 2000);
   };
 
   const pregunta = (clase, dia) => {
-    if(confirm("¿Estas seguro de querer reservar una clase de " + clase + " el " + dia +"?")) {
-      reservar(clase, dia);
-    }
+    let user = localStorage.getItem("token");
+    fetch(backend + "/clases/" + clase)
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.error) {
+          console.log(data.error);
+        }
+
+        data.horario.map((h) => {
+          if (h.dia === dia) {
+            if (!h.reserva.includes(user)) {
+              if (
+                confirm(
+                  "¿Estas seguro de querer reservar una clase de " +
+                    clase +
+                    " el " +
+                    dia +
+                    "?"
+                )
+              ) {
+                reservar(clase, dia);
+              }
+            }else{
+              alert("Ya tienes una reserva en " + clase + " para el "+ dia);
+            }
+          }
+        });
+      });
   };
 
   return isLogged ? (
@@ -71,43 +96,43 @@ export default function Horarios({ data }) {
         <Listar data={data} />
       </div>
       <div className={styles.containerForm}>
-          <select
-            name="clases"
-            defaultValue={"Selecciona"}
-            onChange={(e) => setClase(e.target.value)}
-            className={styles.select}
-          >
-            <option value="">Selecciona</option>
-            {data.map((item) => (
-              <option
-                value={item.nombre}
-                key={item._id}
-                className={styles.option}
-              >
-                {item.nombre}
-              </option>
-            ))}
-          </select>
-          <select
-            name="dias"
-            defaultValue={"Selecciona"}
-            onChange={(e) => setDia(e.target.value)}
-            className={styles.select}
-          >
-            <option value="">Selecciona</option>
-            {horarios.map((item) => (
-              <option value={item.dia} key={item.dia} className={styles.option}>
-                {item.dia} a las {item.hora}:00
-              </option>
-            ))}
-          </select>
-          <button
-            type="submit"
-            className={styles.selectB}
-            onClick={() => pregunta(clase, dia)}
-          >
-            Agregar
-          </button>
+        <select
+          name="clases"
+          defaultValue={"Selecciona"}
+          onChange={(e) => setClase(e.target.value)}
+          className={styles.select}
+        >
+          <option value="">Selecciona</option>
+          {data.map((item) => (
+            <option
+              value={item.nombre}
+              key={item._id}
+              className={styles.option}
+            >
+              {item.nombre}
+            </option>
+          ))}
+        </select>
+        <select
+          name="dias"
+          defaultValue={"Selecciona"}
+          onChange={(e) => setDia(e.target.value)}
+          className={styles.select}
+        >
+          <option value="">Selecciona</option>
+          {horarios.map((item) => (
+            <option value={item.dia} key={item.dia} className={styles.option}>
+              {item.dia} a las {item.hora}:00
+            </option>
+          ))}
+        </select>
+        <button
+          type="submit"
+          className={styles.selectB}
+          onClick={() => pregunta(clase, dia)}
+        >
+          Agregar
+        </button>
       </div>
       <Footer />
     </div>

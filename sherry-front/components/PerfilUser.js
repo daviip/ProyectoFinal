@@ -10,8 +10,14 @@ export const PerfilUser = ({ user, data }) => {
     horarios.horario.map((h) => {
       h.reserva.map((r) => {
         if (r.includes(user._id)) {
-          if (!texto.includes(horarios.nombre +", el " + h.dia+  " a las " + h.hora + ":00")) {
-            texto.push(horarios.nombre +", el " + h.dia+  " a las " + h.hora + ":00");
+          if (
+            !texto.includes(
+              horarios.nombre + ", el " + h.dia + " a las " + h.hora + ":00"
+            )
+          ) {
+            texto.push(
+              horarios.nombre + ", el " + h.dia + " a las " + h.hora + ":00"
+            );
             nd.push([horarios.nombre, h.dia]);
           }
         }
@@ -24,11 +30,11 @@ export const PerfilUser = ({ user, data }) => {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${localStorage.getItem("token")}`
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
       body: JSON.stringify({
         dia: dia,
-        token: localStorage.getItem("token")
+        token: localStorage.getItem("token"),
       }),
     })
       .then((res) => res.json())
