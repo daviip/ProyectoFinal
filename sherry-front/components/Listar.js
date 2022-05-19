@@ -118,6 +118,21 @@ export default function Listar({ data }) {
     });
   });
 
+  const cambioColor = (item) => {
+    if (item[1] >= 0 && item[1] <= 5) {
+      return styles.colorV;
+    }
+    if (item[1] > 5 && item[1] <= 10) {
+      return styles.colorA;
+    }
+    if (item[1] > 10 && item[1] < 15) {
+      return styles.colorO;
+    }
+    if (item[1] >= 15) {
+      return styles.colorR;
+    }
+  };
+
   return (
     <table className={styles.table}>
       <thead>
@@ -133,44 +148,43 @@ export default function Listar({ data }) {
       <tbody>
         <tr>
           <th>09:00-10:00</th>
-          {/* <td>{lunes9[0].nombre} <sub>{lunes9[1].reserva.length}/15</sub></td> */}
-          <td>{lunes9[0]}<sub>{lunes9[1]}/15</sub></td>
-          <td>{martes9[0]}<sub>{martes9[1]}/15</sub></td>
-          <td>{miercoles9[0]}<sub>{miercoles9[1]}/15</sub></td>
-          <td>{jueves9[0]}<sub>{jueves9[1]}/15</sub></td>
-          <td>{viernes9[0]}<sub>{viernes9[1]}/15</sub></td>
+          <td className={cambioColor(lunes9)}>{lunes9[0]}<sub>{lunes9[1]}/15</sub></td>
+          <td className={cambioColor(martes9)}>{martes9[0]}<sub>{martes9[1]}/15</sub></td>
+          <td className={cambioColor(miercoles9)}>{miercoles9[0]}<sub>{miercoles9[1]}/15</sub></td>
+          <td className={cambioColor(jueves9)}>{jueves9[0]}<sub>{jueves9[1]}/15</sub></td>
+          <td className={cambioColor(viernes9)}>{viernes9[0]}<sub>{viernes9[1]}/15</sub></td>
         </tr>
         <tr>
           <th>10:00-11:00</th>
-          <td>{lunes10[0]}<sub>{lunes10[1]}/15</sub></td>
-          <td>{martes10[0]}<sub>{martes10[1]}/15</sub></td>
-          <td>{miercoles10[0]}<sub>{miercoles10[1]}/15</sub></td>
-          <td>{jueves10[0]}<sub>{jueves10[1]}/15</sub></td>
-          <td>{viernes10[0]}<sub>{viernes10[1]}/15</sub></td>
+          <td className={cambioColor(lunes10)}>{lunes10[0]}<sub>{lunes10[1]}/15</sub></td>
+          <td className={cambioColor(martes10)}>{martes10[0]}<sub>{martes10[1]}/15</sub></td>
+          <td className={cambioColor(miercoles10)}>{miercoles10[0]}<sub>{miercoles10[1]}/15</sub></td>
+          <td className={cambioColor(jueves10)}>{jueves10[0]}<sub>{jueves10[1]}/15</sub></td>
+          <td className={cambioColor(viernes10)}>{viernes10[0]}<sub>{viernes10[1]}/15</sub></td>
         </tr>
         <tr>
           <th>11:00-12:00</th>
-          <td>{lunes11[0]}<sub>{lunes11[1]}/15</sub></td>
-          <td>{martes11[0]}<sub>{martes11[1]}/15</sub></td>
-          <td>{miercoles11[0]}<sub>{miercoles11[1]}/15</sub></td>
-          <td>{jueves11[0]}<sub>{jueves11[1]}/15</sub></td>
-          <td>{viernes11[0]}<sub>{viernes11[1]}/15</sub></td>
+          <td className={cambioColor(lunes11)}>{lunes11[0]}<sub>{lunes11[1]}/15</sub></td>
+          <td className={cambioColor(martes11)}>{martes11[0]}<sub>{martes11[1]}/15</sub></td>
+          <td className={cambioColor(miercoles11)}>{miercoles11[0]}<sub>{miercoles11[1]}/15</sub></td>
+          <td className={cambioColor(jueves11)}>{jueves11[0]}<sub>{jueves11[1]}/15</sub></td>
+          <td className={cambioColor(viernes11)}>{viernes11[0]}<sub>{viernes11[1]}/15</sub></td>
         </tr>
         <tr>
           <th>12:00-13:00</th>
-          <td>{lunes12[0]}<sub>{lunes12[1]}/15</sub></td>
-          <td>{martes12[0]}<sub>{martes12[1]}/15</sub></td>
-          <td>{miercoles12[0]}<sub>{miercoles12[1]}/15</sub></td>
-          <td>{jueves12[0]}<sub>{jueves12[1]}/15</sub></td>
-          <td>{viernes12[0]}<sub>{viernes12[1]}/15</sub></td>
+          <td className={cambioColor(lunes12)}>{lunes12[0]}<sub>{lunes12[1]}/15</sub></td>
+          <td className={cambioColor(martes12)}>{martes12[0]}<sub>{martes12[1]}/15</sub></td>
+          <td className={cambioColor(miercoles12)}>{miercoles12[0]}<sub>{miercoles12[1]}/15</sub></td>
+          <td className={cambioColor(jueves12)}>{jueves12[0]}<sub>{jueves12[1]}/15</sub></td>
+          <td className={cambioColor(viernes12)}>{viernes12[0]}<sub>{viernes12[1]}/15</sub></td>
         </tr>
         <tr>
           <th>13:00-14:00</th>
-          <td>{lunes13[0]}<sub>{lunes13[1]}/15</sub></td>
-          <td>{martes13[0]}<sub>{martes13[1]}/15</sub></td>
-          <td>{miercoles13[0]}<sub>{miercoles13[1]}/15</sub></td>
-          <td>{jueves13[0]}<sub>{jueves13[1]}/15</sub></td>
-          <td>{viernes13[0]}<sub>{viernes13[1]}/15</sub></td>
+          <td className={cambioColor(lunes13)}>{lunes13[0]}<sub>{lunes13[1]}/15</sub></td>
+          <td className={cambioColor(martes13)}>{martes13[0]}<sub>{martes13[1]}/15</sub></td>
+          <td className={cambioColor(miercoles13)}>{miercoles13[0]}<sub>{miercoles13[1]}/15</sub></td>
+          <td className={cambioColor(jueves13)}>{jueves13[0]}<sub>{jueves13[1]}/15</sub></td>
+          <td className={cambioColor(viernes13)}>{viernes13[0]}<sub>{viernes13[1]}/15</sub></td>
         </tr>
       </tbody>
     </table>

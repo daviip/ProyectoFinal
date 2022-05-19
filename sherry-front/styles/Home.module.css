@@ -256,3 +256,23 @@
   margin-left: 2rem;
   margin-bottom: 10rem;
 }
+
+.colorR{
+  background-color: rgba(255, 0, 0, 0.422);
+  border-radius: 8px;
+}
+
+.colorV{
+  background-color: rgba(0, 255, 0, 0.422);
+  border-radius: 8px;
+}
+
+.colorA{
+  background-color: rgba(255, 255, 0, 0.422);  
+  border-radius: 8px;
+}
+
+.colorO{
+  background-color: rgba(255, 166, 0, 0.422);
+  border-radius: 8px;
+}
