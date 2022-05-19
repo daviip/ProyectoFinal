@@ -37,7 +37,10 @@ export const PerfilUser = ({ user, data }) => {
           </h3>
         </div>
         <div>
-          <Image src={User} width={200} height={200} alt="user" />
+          {/* <Image src={User} width={200} height={200} alt="user" /> */}
+          <button className={styles.button}>
+            <a>Editar Perfil</a>
+          </button>
         </div>
       </div>
     </div>

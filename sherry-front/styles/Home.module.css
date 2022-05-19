@@ -207,6 +207,7 @@
   justify-content: space-around;
   margin-left: 20rem;
   margin-right: 10rem;
+  margin-top : 2rem;
 }
 
 .containerForm {
@@ -253,4 +254,5 @@
 
 .marginn{
   margin-left: 2rem;
+  margin-bottom: 10rem;
 }
