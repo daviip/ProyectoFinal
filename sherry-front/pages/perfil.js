@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { PerfilUser } from "../components/PerfilUser";
 import { backend } from "../public/backend";
 
-export default function Perfil() {
+export default function Perfil({data}) {
   const [token, setToken] = useState("");
   const [user, setUser] = useState("");
 
@@ -35,8 +35,14 @@ export default function Perfil() {
   return (
     <div>
       <Header />
-      <PerfilUser user={user} />
+      <PerfilUser user={user} data={data}/>
       <Footer />
     </div>
   );
+}
+
+export async function getServerSideProps(context) {
+  const res = await fetch(backend + "/clases/all");
+  const data = await res.json();
+  return { props: { data } };
 }
