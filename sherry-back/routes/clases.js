@@ -50,4 +50,29 @@ router.post("/reserva/:nombre", function (req, res) {
   });
 });
 
+// Elimina una reserva en un horario de una clase
+router.delete("/reservaD/:nombre", function (req, res) {
+  const { token, dia } = req.body;
+  Clase.findOne({ nombre: req.params.nombre }, function (err, clase) {
+    if (err)
+      return res.status(500).send({ message: "Error al realizar la petición" });
+    if (!clase) return res.status(404).send({ message: "La clase no existe" });
+    clase.horario.map((horario) => {
+      if (horario.dia == dia) {
+        horario.reserva.map((reserva, index) => {
+          if (reserva == token) {
+            horario.reserva.splice(index, 1);
+          }
+        });
+      }
+    });
+    clase.save(function (err, clase) {
+      if (err)
+        return res.status(500).send({ message: "Error al realizar la petición" });
+      res.json(clase);
+    });
+  });
+});
+
+
 module.exports = router;
