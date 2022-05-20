@@ -39,7 +39,7 @@ export const Clases = ({ data, all }) => {
           <div className={styles.box} key={c._id}>
             <Link href={"/clases/[id]"} as={`/clases/${c.nombre}`}>
               <a>
-                <Image src={img[index]} width={200} height={200} />
+                <Image src={img[index]} width={200} height={200} alt="img"/>
                 <h2>{c.nombre}</h2>
               </a>
             </Link>
@@ -47,7 +47,7 @@ export const Clases = ({ data, all }) => {
         ))}
       </div>
       {all == false ? (
-        <Link href={"/clases"}>
+        <Link href={"/clases"} passHref>
           <div className={styles.cen}>
             <button className={styles.button}>Ver todas las clases</button>
           </div>

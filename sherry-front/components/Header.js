@@ -2,8 +2,7 @@ import Image from "next/image";
 import Logo from "../public/logo.png";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export const Header = () => {
   const [isLogged, setIsLogged] = useState(false);
@@ -22,7 +21,7 @@ export const Header = () => {
   return (
     <div className={styles.containerHeader}>
       <div className={styles.image}>
-        <Image src={Logo} width={130} height={120} />
+        <Image src={Logo} width={130} height={120} alt="img" />
       </div>
       <div className={styles.nav}>
         <div className={styles.navegator}>
@@ -41,10 +40,10 @@ export const Header = () => {
       <div className={styles.login}>
         {isLogged ? (
           <>
-            <Link href="/perfil">
+            <Link href="/perfil" passHref>
               <button className={styles.loginB}>Mi perfil</button>
             </Link>
-            <Link href="/">
+            <Link href="/" passHref>
               <button className={styles.loginB} onClick={handleLogout}>
                 Cerrar sesion
               </button>
@@ -52,7 +51,7 @@ export const Header = () => {
           </>
         ) : (
           <>
-            <Link href="/inicio">
+            <Link href="/inicio" passHref>
               <button className={styles.loginB}>Iniciar sesion</button>
             </Link>
           </>

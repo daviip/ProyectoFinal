@@ -51,6 +51,7 @@ export default function Class({ data }) {
               src={img[i]}
               width={300}
               height={300}
+              alt="img"
               className={styles.porClases1}
             />
             <div className={styles.porClases1}>

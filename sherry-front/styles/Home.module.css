@@ -48,6 +48,7 @@
   box-shadow: #f2e2fa 0px 0px 5px;
   border-radius: 0.5rem;
   font-size: large;
+  background-color: #f2e2fa;
 }
 
 .box:hover {

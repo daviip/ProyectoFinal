@@ -17,7 +17,7 @@ export const Prices = ({ data, all }) => {
       <div className={styles.prices}>
         {tarifa3.map((item) => (
           <div className={styles.box} key={item._id}>
-            <Image src={Logo} width={100} height={90} />
+            <Image src={Logo} width={100} height={90} alt="img"/>
             <p>
               <strong>{item.nombre}</strong>
             </p>
@@ -28,7 +28,7 @@ export const Prices = ({ data, all }) => {
         ))}
       </div>
       {all == false ? (
-        <Link href={"/tarifas"}>
+        <Link href={"/tarifas"} passHref>
         <div className={styles.cen}>
           <button className={styles.button}>Ver todas los precios</button>
         </div>

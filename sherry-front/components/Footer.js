@@ -7,7 +7,7 @@ export const Footer = () => {
   return (
     <div className={styles.containerFooter}>
       <div className={styles.image}>
-        <Image src={Logo} width={130} height={120} />
+        <Image src={Logo} width={130} height={120} alt="img" />
       </div>
       <div className={styles.info}>
         <span className={styles.parainfo}>Para mas info</span>

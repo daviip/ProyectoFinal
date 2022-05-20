@@ -24,7 +24,7 @@ export default function aviso() {
           independientemente de las Condiciones Generales de Contratación que en
           su caso resulten de obligado cumplimiento. USO DEL PORTAL:
           www.gofitness.es/ proporciona el acceso a multitud de informaciones,
-          servicios, programas o datos (en adelante, "los contenidos") en
+          servicios, programas o datos (en adelante, los contenidos) en
           Internet pertenecientes a SG08 GYM SLo a sus licenciantes a los que el
           USUARIO pueda tener acceso. El USUARIO asume la responsabilidad del
           uso del portal. Dicha responsabilidad se extiende al registro que
