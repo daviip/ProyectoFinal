@@ -10,8 +10,8 @@ export default function normativa() {
       <hr className={styles.separador} />
       <div className={styles.informativa}>
         <p>
-          SG08 GYM S.L gestiona bajo la marca GO! FITNESS, el CENTRO deportivo
-          situado en AVENIDA DE AMSTERDAM 4 (en adelante el CENTRO), poniéndola
+          SherryFit S.L gestiona bajo la marca SherryFit, el CENTRO deportivo
+          situado en C. Moreno Mendoza, 4, 11408 Jerez de la Frontera, Cádiz (en adelante el CENTRO), poniéndola
           a disposición de los usuarios con la presente normativa. INSCRIPCIÓN
           a. La dirección del CENTRO se reserva el derecho de admisión a toda
           persona que no cumpla la presente normativa. b. La titularidad de
@@ -85,7 +85,7 @@ export default function normativa() {
           ser perjudicial para la salud de los demás. FINALIZACIÓN DE LA
           CONDICIÓN DE SOCIO a. El SOCIO podrá darse de baja voluntaria avisando
           a la dirección del CENTRO por escrito, a través del formulario de
-          baja, o por email a info@gofitness.es antes del día 20 del mes en qué
+          baja, o por email a informatica@SherryFit.es antes del día 20 del mes en qué
           debe hacerse efectiva la baja, contando siempre días naturales. b. La
           dirección podrá suspender definitivamente la condición de SOCIO si:
           b.1. Sin previo aviso y con efecto inmediato si la conducta del socio
@@ -129,8 +129,8 @@ export default function normativa() {
           se devolverán a su sitio todos aquellos aparatos o instrumentos que se
           utilizaron para el desarrollo de la misma. d. Es necesario el uso de
           toalla de mano para el ejercicio en las clases, salas y de máquinas.
-          e. El usuario deberá seguir las indicaciones del personal de Go!
-          Fitness acerca de su funcionamiento. TAQUILLAS a. El usuario tendrá
+          e. El usuario deberá seguir las indicaciones del personal de SherryFit
+          acerca de su funcionamiento. TAQUILLAS a. El usuario tendrá
           derecho a la utilización diaria y gratuita del servicio de taquillas
           mientras haya disponibles. Éstas deben quedar vacías y abiertas cuando
           el usuario abandone el CENTRO. b. Por motivos de seguridad se
@@ -150,11 +150,11 @@ export default function normativa() {
           adicional, siempre que no se encuentre cubierto el cupo establecido.
           b. Al alquiler de taquillas, siempre que haya disponibles. c. A
           contratar los servicios de un ENTRENADOR PERSONAL de Go! Fitnes si hay
-          disponibles d. Go! Fitness podrá subarrendar espacios dentro de las
+          disponibles d. SherryFit podrá subarrendar espacios dentro de las
           instalaciones, a otras empresas relacionadas con el deporte y la
           salud, para el desarrollo de su actividad. Las tarifas, servicios y
           normativas de prestación de servicios, serán los que cada empresa
-          arrendataria designe en cada momento, no siendo Go! Fitness ,
+          arrendataria designe en cada momento, no siendo SherryFit ,
           responsable de su contenido en ningún momento. HORARIO Y CALENDARIO a.
           El CENTRO permanecerá cerrado durante los días festivos nacionales y
           los correspondientes a su Comunidad y localidad, así como los días 24
@@ -169,11 +169,11 @@ export default function normativa() {
           horario como en contenidos el horario de actividades y clases. e. El
           horario de apertura y cierre, así como el horario de clases y
           actividades, estará a disposición de los usuarios en el CENTRO y en la
-          web. NOTIFICACIONES a. Las notificaciones masivas o personales que Go!
-          Fitness realice a sus usuarios, será mediante envío de email. b. Go!
-          Fitness no dispone de servicio de atención telefónica al cliente,
+          web. NOTIFICACIONES a. Las notificaciones masivas o personales que SherryFit
+          realice a sus usuarios, será mediante envío de email. b. SherryFit
+          no dispone de servicio de atención telefónica al cliente,
           cualquier comunicación a la dirección del CENTRO podrá ser realizada
-          por email a info@gofitness.es LEGISLACIÓN APLICABLE Y JURISDICCIÓN
+          por email a informatica@SherryFit.es LEGISLACIÓN APLICABLE Y JURISDICCIÓN
           COMPETENTE Este documento será interpretado de conformidad con la
           normativa jurídica española, excluyendo cualquier elección de derecho
           aplicable. Ambas partes renuncian de forma expresa a su propio y

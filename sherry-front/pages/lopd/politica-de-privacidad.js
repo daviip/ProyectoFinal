@@ -10,7 +10,7 @@ export default function privacidad() {
       <hr className={styles.separador} />
       <div className={styles.informativa}>
         <p>
-          SG08 GYM SL empresa propietaria de esta Web, pretende, mediante esta
+          SherryFit SL empresa propietaria de esta Web, pretende, mediante esta
           declaración, informar a sus visitantes de la política que nuestra
           empresa sigue en el tratamiento de los datos que se reciben en este
           sitio Web. Política de protección de datos 1. Derecho de información
@@ -22,15 +22,14 @@ export default function privacidad() {
           REGLAMENTO (UE) 2016/679 DEL PARLAMENTO EUROPEO Y DEL CONSEJO de 27 de
           abril de 2016 relativo a la protección de las personas físicas en lo
           que respecta al tratamiento de datos personales y a la libre
-          circulación de estos datos, SG08 GYM SL, titular del sitio Web http://
-          www.gofitness.es/ y https://m.facebook.com/gofitnessjerez/ (en
-          adelante, el sitio Web), informa al usuario de este sitio de la
+          circulación de estos datos, SherryFit SL, titular del sitio Web www.SherryFit.es/
+          (en adelante, el sitio Web), informa al usuario de este sitio de la
           existencia de un fichero automatizado de datos de carácter personal
           creado bajo su responsabilidad. 2.Finalidad Los datos de los usuarios
           registrados a través de los formularios habilitados al efecto en el
           sitio Web son recabados y van a ser tratados e incluidos en los
-          ficheros de SG08 GYM SL., con la finalidad de facilitar la prestación
-          de los servicios que SG08 GYM SL, proporciona a través de dicho sitio
+          ficheros de SherryFit SL., con la finalidad de facilitar la prestación
+          de los servicios que SherryFit SL, proporciona a través de dicho sitio
           Web, que no es otro que el de atender la solicitud efectuada a través
           de la Web y facilitar a sus clientes una presencia online rápida y
           efectiva y ofrecerle servicios que pudieran resultar del interés del
@@ -41,17 +40,17 @@ export default function privacidad() {
           cumplimentar por el usuario para crear cuenta son estrictamente
           necesarios para atender a su petición, siendo voluntaria la inclusión
           de datos en todos los campos. El usuario garantiza que los datos
-          personales facilitados a SG08 GYM SL, son veraces y se hace
+          personales facilitados a SherryFit SL, son veraces y se hace
           responsable de comunicar al mismo cualquier modificación de los
           mismos. 4. Consentimiento del usuario El envío de datos personales,
-          mediante el uso de los formularios electrónicos de SG08 GYM SL, que
-          requieren su consentimiento, otorgan a SG08 GYM SL, la autorización
+          mediante el uso de los formularios electrónicos de SherryFit SL, que
+          requieren su consentimiento, otorgan a SherryFit SL, la autorización
           expresa del remitente al tratamiento automatizado de los datos
           incluidos en los medios indicados, para las finalidades antes
           descritas así como al envío de comunicaciones vía electrónica con
           información acerca de nuestros servicios. Así mismo, mediante la
           aceptación de la política de privacidad, el usuario autoriza
-          expresamente a SG08 GYM SL, a acceder los referidos datos personales a
+          expresamente a SherryFit SL, a acceder los referidos datos personales a
           otras empresas del grupo, cuya intervención sea necesaria para
           satisfacer los servicios solicitados o empresas del mismo sector
           asociadas que, con su participación, pueden determinar el cumplimiento
@@ -72,20 +71,20 @@ export default function privacidad() {
           personas físicas en lo que respecta al tratamiento de datos personales
           y a la libre circulación de estos datos, le informamos que sus datos
           personales formarán parte del fichero de Información y Contacto así
-          como el de Usuarios de la Web, titularidad de SG08 GYM SL, con la
+          como el de Usuarios de la Web, titularidad de SherryFit SL, con la
           finalidad de atender su solicitud. Sus datos no serán cedidos a
           terceros salvo que la ley lo permita o lo exija expresamente. Así
           mismo, le informamos que tiene Ud. la posibilidad de ejercitar los
           derechos de acceso, rectificación y oposición en relación a sus datos
           personales, así como el derecho de cancelación y/o supresión y el de
-          portabilidad de sus datos. El responsable del tratamiento, SG08 GYM
+          portabilidad de sus datos. El responsable del tratamiento, SherryFit
           SL, tiene designado un Delegado de Protección de Datos quien podrá
           informarles y asesorarles en la forma de ejercer sus derechos,
           pudiendo acceder al mismo a través del correo electrónico
           info@marcagratis.es y en el teléfono 956314662. Igualmente deben saber
           que pueden elevar sus quejas o denuncias a la Agencia Española de
           Protección de Datos, órgano de control designado para España. 6.
-          Seguridad SG08 GYM SL, mantiene los niveles de seguridad de protección
+          Seguridad SherryFit SL, mantiene los niveles de seguridad de protección
           de datos personales conforme al REGLAMENTO (UE) 2016/679 DEL
           PARLAMENTO EUROPEO Y DEL CONSEJO de 27 de abril de 2016 relativo a la
           protección de las personas físicas en lo que respecta al tratamiento
@@ -94,7 +93,7 @@ export default function privacidad() {
           medios técnicos a su alcance para evitar la pérdida, mal uso,
           alteración, acceso no autorizado y robo de los datos que el usuario
           facilite a través del sitio Web, sin perjuicio de informarle de que
-          las medidas de seguridad en Internet no son inexpugnables. SG08 GYM
+          las medidas de seguridad en Internet no son inexpugnables. SherryFit
           SL, se compromete a cumplir con el deber de secreto y confidencialidad
           respecto de los datos personales contenidos en el fichero automatizado
           de acuerdo con la legislación aplicable, así como a conferirles un
@@ -105,7 +104,7 @@ export default function privacidad() {
           por las diferentes páginas del presente sitio Web y que en ningún caso
           permitirán la identificación del usuario. En cualquier caso, el
           usuario podrá denegar o impedir la instalación de estas cookies
-          modificando la configuración de su navegador. SG08 GYM SL, tampoco
+          modificando la configuración de su navegador. SherryFit SL, tampoco
           utiliza técnicas de “spamming” y únicamente tratará los datos que el
           usuario transmita mediante los formularios electrónicos habilitados en
           este sitio Web o mensajes de correo electrónico. En caso de duda o
@@ -118,10 +117,10 @@ export default function privacidad() {
           de diciembre de 1999) y a la Ley 34/2002, de 11 de julio, de servicios
           de la Sociedad de Información y de Comercio Electrónico (B.O.E. de 12
           de julio de 2002). 8. Modificación de la presente política de
-          privacidad SG08 GYM SL, se reserva el derecho a modificar la presente
+          privacidad SherryFit SL, se reserva el derecho a modificar la presente
           política para adaptarla a futuras novedades legislativas o
           jurisprudenciales, así como a prácticas de la industria, informando
-          previamente a los usuarios de los cambios que en ella se produzca
+          previamente a los usuarios de los cambios que en ella se produzca.
         </p>
       </div>
       <Footer />
