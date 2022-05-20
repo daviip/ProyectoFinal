@@ -1,6 +1,7 @@
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import styles from "../styles/Home.module.css";
+import ListarF from "../components/ListarF";
 import Listar from "../components/Listar";
 import { backend } from "../public/backend";
 import { useEffect, useState } from "react";
@@ -146,7 +147,7 @@ export default function Horarios({ data }) {
       <h1 className={styles.title}>Horarios</h1>
       <hr className={styles.separador} />
       <div className={styles.containerTable}>
-        <Listar data={data} />
+        <ListarF data={data} />
       </div>
       <Footer />
     </div>
