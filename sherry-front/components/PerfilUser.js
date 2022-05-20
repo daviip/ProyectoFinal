@@ -2,8 +2,10 @@ import styles from "../styles/Home.module.css";
 import Image from "next/image";
 import borrarF from "../public/borrar.png";
 import { backend } from "../public/backend";
+import { useEffect, useState } from "react";
 
 export const PerfilUser = ({ user, data }) => {
+  const [isAdmin, setIsAdmin] = useState(false);
   let texto = [];
   let nd = [];
   data.map((horarios) => {
@@ -24,6 +26,10 @@ export const PerfilUser = ({ user, data }) => {
       });
     });
   });
+
+  useEffect(() => {
+    setIsAdmin(localStorage.getItem("token") === "62875f3d4e30a4304908346d");
+  }, [isAdmin]);
 
   const borrar = (nombre, dia) => {
     fetch(backend + "/clases/reservaD/" + nombre, {
@@ -52,9 +58,36 @@ export const PerfilUser = ({ user, data }) => {
   };
 
   const pregunta = (nombre, dia) => {
-    if(confirm("¿Estas seguro de querer borrar la reserva de una clase de " + nombre + " el " + dia +"?")) {
+    if (
+      confirm(
+        "¿Estas seguro de querer borrar la reserva de una clase de " +
+          nombre +
+          " el " +
+          dia +
+          "?"
+      )
+    ) {
       borrar(nombre, dia);
     }
+  };
+
+  const borrarReservas = () => {
+    data.map((c) => {
+      fetch(backend + "/clases/reservaB/" + c.nombre, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.error) {
+            console.log(data.error);
+          } else {
+            console.log("Reservas eliminadas");
+          }
+        });
+    });
   };
 
   return (
@@ -90,9 +123,15 @@ export const PerfilUser = ({ user, data }) => {
           </h3>
         </div>
         <div>
-          <button className={styles.button}>
-            <a>Editar Perfil</a>
-          </button>
+          {isAdmin ? (
+            <button className={styles.button} onClick={() => borrarReservas()}>
+              <a>Borrar Reservas</a>
+            </button>
+          ) : (
+            <button className={styles.button}>
+              <a>Editar Perfil</a>
+            </button>
+          )}
         </div>
       </div>
     </div>

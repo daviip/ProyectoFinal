@@ -74,21 +74,38 @@ router.delete("/reservaD/:nombre", function (req, res) {
   });
 });
 
-// Borrar todas las reservas de todas las clases
-router.delete("/reserva", function (req, res) {
-  Clase.find(function (err, clases) {
+// // Borrar todas las reservas de todas las clases
+// router.delete("/reservaB", function (req, res) {
+//   Clase.find(function (err, clases) {
+//     if (err)
+//       return res.status(500).send({ message: "Error al realizar la petición" });
+//     if (!clases) return res.status(404).send({ message: "No hay clases" });
+//     clases.map((c) => {
+//       c.horario.map((h) => {
+//         h.reserva = [];
+//       });
+//     });
+//     clases.save(function (err, clases) {
+//       if (err)
+//         return res.status(500).send({ message: "Error al realizar la petición" });
+//       res.json(clases);
+//     });
+//   });
+// });
+
+// Borrar las reservas de una clase
+router.delete("/reservaB/:nombre", function (req, res) {
+  Clase.findOne({ nombre: req.params.nombre }, function (err, clase) {
     if (err)
       return res.status(500).send({ message: "Error al realizar la petición" });
-    if (!clases) return res.status(404).send({ message: "No hay clases" });
-    clases.map((clase) => {
-      clase.horario.map((horario) => {
-        horario.reserva = [];
-      });
+    if (!clase) return res.status(404).send({ message: "La clase no existe" });
+    clase.horario.map((horario) => {
+      horario.reserva = [];
     });
-    clases.save(function (err, clases) {
+    clase.save(function (err, clase) {
       if (err)
         return res.status(500).send({ message: "Error al realizar la petición" });
-      res.json(clases);
+      res.json(clase);
     });
   });
 });
