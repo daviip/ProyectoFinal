@@ -36,14 +36,14 @@ export const Clases = ({ data, all }) => {
       <hr className={styles.separador} />
       <div className={styles.prices}>
         {clases3.map((c, index) => (
-          <div className={styles.box} key={c._id}>
-            <Link href={"/clases/[id]"} as={`/clases/${c.nombre}`}>
+          <Link href={"/clases/[id]"} as={`/clases/${c.nombre}`} key={c._id}>
+            <div className={styles.box}>
               <a>
-                <Image src={img[index]} width={200} height={200} alt="img"/>
+                <Image src={img[index]} width={200} height={200} alt="img" />
                 <h2>{c.nombre}</h2>
               </a>
-            </Link>
-          </div>
+            </div>
+          </Link>
         ))}
       </div>
       {all == false ? (

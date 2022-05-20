@@ -54,7 +54,7 @@ export const PerfilUser = ({ user, data }) => {
 
     setTimeout(() => {
       window.location.reload();
-    }, 2000);
+    }, 1000);
   };
 
   const pregunta = (nombre, dia) => {
@@ -114,6 +114,7 @@ export const PerfilUser = ({ user, data }) => {
                         width={20}
                         height={20}
                         alt="borrar"
+                        className={styles.borrar}
                       />
                     </span>
                   </p>

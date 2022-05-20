@@ -143,6 +143,7 @@
   padding: 1rem;
   padding-left: 3rem;
   padding-right: 3rem;
+  font-size: large;
 }
 
 .containerClases {
@@ -164,6 +165,7 @@
 
 .porClases1 {
   width: 40%;
+  font-size: large;
 }
 
 .login {
@@ -283,4 +285,8 @@
   padding: 1rem;
   background-size: cover;
   background-position: 50%;
+}
+
+.borrar{
+  cursor: pointer;
 }

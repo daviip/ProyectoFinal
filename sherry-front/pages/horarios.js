@@ -54,7 +54,7 @@ export default function Horarios({ data }) {
     // Reiniciar la pagina despues de 2 segundos
     setTimeout(() => {
       window.location.reload();
-    }, 2000);
+    }, 1000);
   };
 
   const pregunta = (clase, dia) => {
@@ -93,7 +93,7 @@ export default function Horarios({ data }) {
   };
 
   return isLogged ? (
-    <div>
+    <div className={styles.horarios}>
       <Header />
       <h1 className={styles.title}>Horarios</h1>
       <hr className={styles.separador} />

@@ -30,7 +30,7 @@ export const Prices = ({ data, all }) => {
       {all == false ? (
         <Link href={"/tarifas"} passHref>
         <div className={styles.cen}>
-          <button className={styles.button}>Ver todas los precios</button>
+          <button className={styles.button}>Ver todos los precios</button>
         </div>
         </Link>
       ) : null}
