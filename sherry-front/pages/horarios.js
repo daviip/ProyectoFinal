@@ -68,19 +68,23 @@ export default function Horarios({ data }) {
         data.horario.map((h) => {
           if (h.dia === dia) {
             if (!h.reserva.includes(user)) {
-              if (
-                confirm(
-                  "¿Estas seguro de querer reservar una clase de " +
-                    clase +
-                    " el " +
-                    dia +
-                    "?"
-                )
-              ) {
-                reservar(clase, dia);
+              if (h.reserva.length < 15) {
+                if (
+                  confirm(
+                    "¿Estas seguro de querer reservar una clase de " +
+                      clase +
+                      " el " +
+                      dia +
+                      "?"
+                  )
+                ) {
+                  reservar(clase, dia);
+                }
+              } else {
+                alert("No hay cupo en " + clase + " para el " + dia);
               }
-            }else{
-              alert("Ya tienes una reserva en " + clase + " para el "+ dia);
+            } else {
+              alert("Ya tienes una reserva en " + clase + " para el " + dia);
             }
           }
         });

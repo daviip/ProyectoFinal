@@ -74,5 +74,24 @@ router.delete("/reservaD/:nombre", function (req, res) {
   });
 });
 
+// Borrar todas las reservas de todas las clases
+router.delete("/reserva", function (req, res) {
+  Clase.find(function (err, clases) {
+    if (err)
+      return res.status(500).send({ message: "Error al realizar la petición" });
+    if (!clases) return res.status(404).send({ message: "No hay clases" });
+    clases.map((clase) => {
+      clase.horario.map((horario) => {
+        horario.reserva = [];
+      });
+    });
+    clases.save(function (err, clases) {
+      if (err)
+        return res.status(500).send({ message: "Error al realizar la petición" });
+      res.json(clases);
+    });
+  });
+});
+
 
 module.exports = router;
