@@ -32,7 +32,7 @@ export const Slider = () => {
     },
   ];
 
-  return (
+  return (<div className={styles.pruebame}>
     <Swiper
       modules={[Navigation, Autoplay, A11y]}
       spaceBetween={0}
@@ -46,6 +46,6 @@ export const Slider = () => {
           <Image src={item.image} height={400} width={1000} alt="img" />
         </SwiperSlide>
       ))}
-    </Swiper>
+    </Swiper></div>
   );
 };
