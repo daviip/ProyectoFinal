@@ -36,7 +36,7 @@ export const Clases = ({ data, all }) => {
       <hr className={styles.separador} />
       <div className={styles.prices}>
         {clases3.map((c, index) => (
-          <Link href={"/clases/[id]"} as={`/clases/${c.nombre}`} key={c._id}>
+          <Link href={"/clases/[id]"} as={`/clases/${c.nombre}`} key={c._id} passHref>
             <div className={styles.box}>
               <a>
                 <Image src={img[index]} width={200} height={200} alt="img" />
