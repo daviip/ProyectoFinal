@@ -73,7 +73,7 @@ router.delete("/:id", function (req, res, next) {
 });
 
 // Editar usuario
-router.put("/:id", function (req, res, next) {
+router.put("/edit/:id", function (req, res, next) {
   User.findByIdAndUpdate(req.params.id, req.body, function (err, user) {
     if (err) return next(err);
     res.json(user);

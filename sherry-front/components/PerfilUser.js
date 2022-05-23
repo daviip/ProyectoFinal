@@ -6,6 +6,11 @@ import { useEffect, useState } from "react";
 
 export const PerfilUser = ({ user, data }) => {
   const [isAdmin, setIsAdmin] = useState(false);
+  const [isEditando, setEditando] = useState(false);
+  const [isCorreo, setCorreo] = useState(user.email);
+  const [isTelefono, setTelefono] = useState(user.telefono);
+  const [isTarifa, setTarifa] = useState(user.tarifa);
+
   let texto = [];
   let nd = [];
   data.map((horarios) => {
@@ -90,6 +95,40 @@ export const PerfilUser = ({ user, data }) => {
     });
   };
 
+  const handleChange = (e) => {
+    if (e.target.name === "correo") {
+      setCorreo(e.target.value);
+    } else if (e.target.name === "telefono") {
+      setTelefono(e.target.value);
+    } else if (e.target.name === "tarifa") {
+      setTarifa(e.target.value);
+    }
+  };
+
+  const editarP = () => {
+    setEditando(true);
+  };
+
+  const guardarP = () => {
+    fetch(backend + "/users/edit/" + user._id, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        nombre: user.nombre,
+        apellido: user.apellido,
+        email: isCorreo,
+        telefono: isTelefono,
+        tarifa: isTarifa,
+      })
+    })
+    setEditando(false);
+    setTimeout(() => {
+      window.location.reload();
+    }, 100);
+  };
+
   return (
     <div>
       <h1 className={styles.title}>
@@ -98,9 +137,27 @@ export const PerfilUser = ({ user, data }) => {
       <hr className={styles.separador} />
       <div className={styles.perfil}>
         <div>
-          <h3>Correo: {user.email}</h3>
-          <h3>Telefono: {user.telefono}</h3>
-          <h3>Tarifa: {user.tarifa}</h3>
+          {isEditando ? (
+            <form>
+              <strong>
+                <p>
+                  Correo<input value={isCorreo} placeholder={user.email} name="correo" onChange={handleChange}></input>
+                </p>
+                <p>
+                  Telefono<input value={isTelefono} placeholder={user.telefono} name="telefono" onChange={handleChange}></input>
+                </p>
+                <p>
+                  Tarifa<input value={isTarifa} placeholder={user.tarifa} name="tarifa" onChange={handleChange}></input>
+                </p>
+              </strong>
+            </form>
+          ) : (
+            <div>
+              <h3>Correo: {user.email}</h3>
+              <h3>Telefono: {user.telefono}</h3>
+              <h3>Tarifa: {user.tarifa}</h3>
+            </div>
+          )}
           <h3>
             Reservas:
             <div className={styles.marginn}>
@@ -128,8 +185,12 @@ export const PerfilUser = ({ user, data }) => {
             <button className={styles.button} onClick={() => borrarReservas()}>
               <a>Borrar Reservas</a>
             </button>
+          ) : isEditando ? (
+            <button className={styles.button} onClick={() => guardarP()}>
+              <a>Guardar Perfil</a>
+            </button>
           ) : (
-            <button className={styles.button}>
+            <button className={styles.button} onClick={() => editarP()}>
               <a>Editar Perfil</a>
             </button>
           )}
