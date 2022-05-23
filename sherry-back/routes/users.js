@@ -4,9 +4,9 @@ var User = require("../models/user");
 var bcrypt = require("bcryptjs");
 
 /* GET users listing. */
-router.get("/", function (req, res, next) {
-  res.send("respond with a resource");
-});
+// router.get("/", function (req, res, next) {
+//   res.send("respond with a resource");
+// });
 
 // Mostrar todos los usuarios
 router.get("/all", function (req, res, next) {

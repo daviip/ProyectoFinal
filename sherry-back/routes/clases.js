@@ -2,9 +2,9 @@ var express = require("express");
 const Clase = require("../models/Clase");
 var router = express.Router();
 
-router.get("/", function (req, res, next) {
-  res.send("Página de clases");
-});
+// router.get("/", function (req, res, next) {
+//   res.send("Página de clases");
+// });
 
 // Mostrar todas las clases
 router.get("/all", function (req, res) {
