@@ -71,7 +71,7 @@ export default function Class({ data }) {
 export async function getServerSideProps(context) {
   const { params } = context;
   const { id } = params;
-  const res = await fetch(backend + "/" + id);
+  const res = await fetch(backend + "/clases/" + id);
   const data = await res.json();
   return { props: { data } };
 }
