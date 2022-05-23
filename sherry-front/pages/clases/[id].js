@@ -11,6 +11,7 @@ import Yoga from "../../public/imagesC/6.jpg";
 import CrossTraining from "../../public/imagesC/7.jpg";
 import BodyPump from "../../public/imagesC/8.jpg";
 import Zumba from "../../public/imagesC/9.jpg";
+import { backend } from "../../public/backend";
 
 let img = [
   Walking,
@@ -70,7 +71,7 @@ export default function Class({ data }) {
 export async function getServerSideProps(context) {
   const { params } = context;
   const { id } = params;
-  const res = await fetch("http://localhost:5000/clases/" + id);
+  const res = await fetch(backend + "/" + id);
   const data = await res.json();
   return { props: { data } };
 }
