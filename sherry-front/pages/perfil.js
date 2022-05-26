@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { PerfilUser } from "../components/PerfilUser";
 import { backend } from "../public/backend";
 
-export default function Perfil({data}) {
+export default function Perfil({data, dataTarifas}) {
   const [token, setToken] = useState("");
   const [user, setUser] = useState("");
 
@@ -35,7 +35,7 @@ export default function Perfil({data}) {
   return (
     <div>
       <Header />
-      <PerfilUser user={user} data={data}/>
+      <PerfilUser user={user} data={data} dataTarifas={dataTarifas}/>
       <Footer />
     </div>
   );
@@ -44,5 +44,7 @@ export default function Perfil({data}) {
 export async function getServerSideProps(context) {
   const res = await fetch(backend + "/clases/all");
   const data = await res.json();
-  return { props: { data } };
+  const resTarifas = await fetch(backend + "/tarifas/all");
+  const dataTarifas = await resTarifas.json();
+  return { props: { data, dataTarifas } };
 }
