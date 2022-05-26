@@ -5,12 +5,15 @@ import { backend } from "../public/backend";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
-export const PerfilUser = ({ user, data, dataTarifas }) => {
+export const PerfilUser = ({ user, data, dataTarifas, dataUsers }) => {
   const [isAdmin, setIsAdmin] = useState(false);
   const [isEditando, setEditando] = useState(false);
   const [isCorreo, setCorreo] = useState(user.email);
   const [isTelefono, setTelefono] = useState(user.telefono);
   const [isTarifa, setTarifa] = useState(user.tarifa);
+  const [isUserB, setUserB] = useState("");
+
+  console.log(dataUsers);
 
   let texto = [];
   let nd = [];
@@ -34,7 +37,7 @@ export const PerfilUser = ({ user, data, dataTarifas }) => {
   });
 
   useEffect(() => {
-    setIsAdmin(localStorage.getItem("token") === "62875f3d4e30a4304908346d");
+    setIsAdmin(localStorage.getItem("token") === "628f283275c3530f7cd3a8f7");
   }, [isAdmin]);
 
   const borrar = (nombre, dia) => {
@@ -130,6 +133,19 @@ export const PerfilUser = ({ user, data, dataTarifas }) => {
     }, 100);
   };
 
+  const borrarUser = () => {
+    fetch(backend + "/users/delete/" + isUserB, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    setUserB("");
+    setTimeout(() => {
+      window.location.reload();
+    }, 100);
+  }
+
   return (
     <div>
       <h1 className={styles.title}>
@@ -161,7 +177,11 @@ export const PerfilUser = ({ user, data, dataTarifas }) => {
                 </p>
                 <p>
                   Tarifa
-                  <select name="tarifa" defaultValue={isTarifa} onChange={handleChange}>
+                  <select
+                    name="tarifa"
+                    defaultValue={isTarifa}
+                    onChange={handleChange}
+                  >
                     <option value="">Seleccione una tarifa</option>
                     {dataTarifas.map((tarifa) => {
                       return (
@@ -205,19 +225,36 @@ export const PerfilUser = ({ user, data, dataTarifas }) => {
         </div>
         <div>
           {isAdmin ? (
-            <>
-              <button
-                className={styles.loginB}
-                onClick={() => borrarReservas()}
-              >
-                <a>Borrar Reservas</a>
-              </button>
-              <button className={styles.loginB}>
-                <Link href="/registro">
-                  <a>Crear Usuario</a>
-                </Link>
-              </button>
-            </>
+            <div>
+              <div>
+                <button
+                  className={styles.loginB}
+                  onClick={() => borrarReservas()}
+                >
+                  <a>Borrar Reservas</a>
+                </button>
+                <button className={styles.loginB}>
+                  <Link href="/registro">
+                    <a>Crear Usuario</a>
+                  </Link>
+                </button>
+              </div>
+              <div>
+                <select onChange={(e) => setUserB(e.target.value)}>
+                  <option value="-">Borrado de usuario</option>
+                  {dataUsers.map((c) => {
+                    return (
+                      <option value={c._id}>
+                        {c.nombre} {c.apellido}
+                      </option>
+                    );
+                  })}
+                </select>
+                <button className={styles.loginB} onClick={() => borrarUser()}>
+                  <a>Borrar Usuario</a>
+                </button>
+              </div>
+            </div>
           ) : isEditando ? (
             <button className={styles.button} onClick={() => guardarP()}>
               <a>Guardar Perfil</a>
