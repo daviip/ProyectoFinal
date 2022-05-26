@@ -290,3 +290,17 @@
 .borrar{
   cursor: pointer;
 }
+
+.botonera{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.margen{
+  margin-left: 2rem;
+  margin-bottom: 10rem;
+}
+
+.margen2{
+  margin-left: 2rem;
+}

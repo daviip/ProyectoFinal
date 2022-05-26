@@ -13,8 +13,6 @@ export const PerfilUser = ({ user, data, dataTarifas, dataUsers }) => {
   const [isTarifa, setTarifa] = useState(user.tarifa);
   const [isUserB, setUserB] = useState("");
 
-  console.log(dataUsers);
-
   let texto = [];
   let nd = [];
   data.map((horarios) => {
@@ -144,7 +142,7 @@ export const PerfilUser = ({ user, data, dataTarifas, dataUsers }) => {
     setTimeout(() => {
       window.location.reload();
     }, 100);
-  }
+  };
 
   return (
     <div>
@@ -239,7 +237,7 @@ export const PerfilUser = ({ user, data, dataTarifas, dataUsers }) => {
                   </Link>
                 </button>
               </div>
-              <div>
+              <div className={styles.botonera}>
                 <select onChange={(e) => setUserB(e.target.value)}>
                   <option value="-">Borrado de usuario</option>
                   {dataUsers.map((c) => {
@@ -252,6 +250,18 @@ export const PerfilUser = ({ user, data, dataTarifas, dataUsers }) => {
                 </select>
                 <button className={styles.loginB} onClick={() => borrarUser()}>
                   <a>Borrar Usuario</a>
+                </button>
+              </div>
+              <div>
+                <button className={styles.loginB}>
+                  <Link href="/reservaactual">
+                    <a>Ver Reserva Semanal</a>
+                  </Link>
+                </button>
+                <button className={styles.loginB}>
+                  <Link href="/reservahistorial">
+                    <a>Ver Historial Reservas</a>
+                  </Link>
                 </button>
               </div>
             </div>
