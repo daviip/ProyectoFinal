@@ -79,6 +79,24 @@ export const PerfilUser = ({ user, data, dataTarifas, dataUsers }) => {
   };
 
   const borrarReservas = () => {
+      fetch(backend + "/historial/add", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          historial: data,
+        }),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.error) {
+            console.log(data.error);
+          } else {
+            console.log("Historial guardado");
+          }
+        });
+
     data.map((c) => {
       fetch(backend + "/clases/reservaB/" + c.nombre, {
         method: "DELETE",
