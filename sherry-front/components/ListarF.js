@@ -132,93 +132,43 @@ export default function Listar({ data }) {
       <tbody>
         <tr>
           <th>09:00-10:00</th>
-          <td>
-            {lunes9[0]}
-          </td>
-          <td>
-            {martes9[0]}
-          </td>
-          <td>
-            {miercoles9[0]}
-          </td>
-          <td>
-            {jueves9[0]}
-          </td>
-          <td>
-            {viernes9[0]}
-          </td>
+          <td>{lunes9[0]}</td>
+          <td>{martes9[0]}</td>
+          <td>{miercoles9[0]}</td>
+          <td>{jueves9[0]}</td>
+          <td>{viernes9[0]}</td>
         </tr>
         <tr>
           <th>10:00-11:00</th>
-          <td>
-            {lunes10[0]}
-          </td>
-          <td>
-            {martes10[0]}
-          </td>
-          <td>
-            {miercoles10[0]}
-          </td>
-          <td>
-            {jueves10[0]}
-          </td>
-          <td>
-            {viernes10[0]}
-          </td>
+          <td>{lunes10[0]}</td>
+          <td>{martes10[0]}</td>
+          <td>{miercoles10[0]}</td>
+          <td>{jueves10[0]}</td>
+          <td>{viernes10[0]}</td>
         </tr>
         <tr>
           <th>11:00-12:00</th>
-          <td>
-            {lunes11[0]}
-          </td>
-          <td>
-            {martes11[0]}
-          </td>
-          <td>
-            {miercoles11[0]}
-          </td>
-          <td>
-            {jueves11[0]}
-          </td>
-          <td>
-            {viernes11[0]}
-          </td>
+          <td>{lunes11[0]}</td>
+          <td>{martes11[0]}</td>
+          <td>{miercoles11[0]}</td>
+          <td>{jueves11[0]}</td>
+          <td>{viernes11[0]}</td>
         </tr>
         <tr>
           <th>12:00-13:00</th>
-          <td>
-            {lunes12[0]}
-          </td>
-          <td>
-            {martes12[0]}
-          </td>
-          <td>
-            {miercoles12[0]}
-          </td>
-          <td>
-            {jueves12[0]}
-          </td>
-          <td>
-            {viernes12[0]}
-          </td>
+          <td>{lunes12[0]}</td>
+          <td>{martes12[0]}</td>
+          <td>{miercoles12[0]}</td>
+          <td>{jueves12[0]}</td>
+          <td>{viernes12[0]}</td>
         </tr>
         <tr>
           <th>13:00-14:00</th>
-          <td>
-            {lunes13[0]}
-          </td>
-          <td>
-            {martes13[0]}
-          </td>
-          <td>
-            {miercoles13[0]}
-          </td>
-          <td>
-            {jueves13[0]}
-          </td>
-          <td>
-            {viernes13[0]}
-          </td>
+          <td>{lunes13[0]}</td>
+          <td>{martes13[0]}</td>
+          <td>{miercoles13[0]}</td>
+          <td>{jueves13[0]}</td>
+          <td>{viernes13[0]}</td>
         </tr>
       </tbody>
     </table>

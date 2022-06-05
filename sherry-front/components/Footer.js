@@ -1,14 +1,9 @@
-import Image from "next/image";
-import Logo from "../public/logo.png";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
 
 export const Footer = () => {
   return (
     <div className={styles.containerFooter}>
-      {/* <div className={styles.image}>
-        <Image src={Logo} width={130} height={120} alt="img" />
-      </div> */}
       <div className={styles.info}>
         <span className={styles.parainfo}>Para mas info</span>
         <br />
@@ -26,9 +21,6 @@ export const Footer = () => {
           <Link href="/lopd/politica-de-privacidad">
             Politica de privacidad
           </Link>
-        </div>
-        <div>
-          <Link href="/lopd/politica-de-cookies">Politica de cookies</Link>
         </div>
         <div>
           <Link href="/lopd/aviso-legal">Aviso legal</Link>

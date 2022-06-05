@@ -31,7 +31,6 @@ export const Logeo = () => {
         </div>
       ) : (
         <div className={styles.pepe}>
-
           <Link href="/inicio" passHref>
             <button className={styles.loginB}>Iniciar sesion</button>
           </Link>

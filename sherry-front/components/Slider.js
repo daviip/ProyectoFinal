@@ -32,20 +32,22 @@ export const Slider = () => {
     },
   ];
 
-  return (<div className={styles.pruebame}>
-    <Swiper
-      modules={[Navigation, Autoplay, A11y]}
-      spaceBetween={0}
-      slidesPerView={1}
-      navigation
-      autoplay={{ delay: 5000 }}
-      rewind={true}
-    >
-      {img.map((item) => (
-        <SwiperSlide key={item.id} className={styles.sli}>
-          <Image src={item.image} height={400} width={1000} alt="img" />
-        </SwiperSlide>
-      ))}
-    </Swiper></div>
+  return (
+    <div className={styles.pruebame}>
+      <Swiper
+        modules={[Navigation, Autoplay, A11y]}
+        spaceBetween={0}
+        slidesPerView={1}
+        navigation
+        autoplay={{ delay: 5000 }}
+        rewind={true}
+      >
+        {img.map((item) => (
+          <SwiperSlide key={item.id} className={styles.sli}>
+            <Image src={item.image} height={400} width={1000} alt="img" />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
   );
 };

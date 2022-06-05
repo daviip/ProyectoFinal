@@ -18,21 +18,23 @@ export default function Clase({ data, userData }) {
     <div>
       <Header />
       <div className={styles.margen}>
-      {data.map((clase, i) => (
-        <div key={i}>
-          <h1>{clase.nombre}</h1>
-          {clase.horario.map((h, i) => (
-            <div key={i} className={styles.margen2}>
-              <h3>
-                {h.dia} - {h.hora}:00
-              </h3>
-              {h.reserva.map((r, i) => (
-                <p key={i} className={styles.margen2}>{cambiaNombre(r)}</p>
-              ))}
-            </div>
-          ))}
-        </div>
-      ))}
+        {data.map((clase, i) => (
+          <div key={i}>
+            <h1>{clase.nombre}</h1>
+            {clase.horario.map((h, i) => (
+              <div key={i} className={styles.margen2}>
+                <h3>
+                  {h.dia} - {h.hora}:00
+                </h3>
+                {h.reserva.map((r, i) => (
+                  <p key={i} className={styles.margen2}>
+                    {cambiaNombre(r)}
+                  </p>
+                ))}
+              </div>
+            ))}
+          </div>
+        ))}
       </div>
       <Footer />
     </div>

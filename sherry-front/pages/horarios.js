@@ -5,7 +5,6 @@ import ListarF from "../components/ListarF";
 import Listar from "../components/Listar";
 import { backend } from "../public/backend";
 import { useEffect, useState } from "react";
-// import { sendData } from "../components/SendData";
 
 export default function Horarios({ data }) {
   const [isLogged, setIsLogged] = useState(false);
@@ -14,7 +13,6 @@ export default function Horarios({ data }) {
   const [dia, setDia] = useState("");
   let horarios = [];
 
-  // Obtiene horarios
   data.find((item) => {
     if (item.nombre === clase) {
       horarios = item.horario;
@@ -51,7 +49,6 @@ export default function Horarios({ data }) {
           }
         });
     }
-    // Reiniciar la pagina despues de 2 segundos
     setTimeout(() => {
       window.location.reload();
     }, 1000);
@@ -97,7 +94,7 @@ export default function Horarios({ data }) {
       <Header />
       <h1 className={styles.title}>Horarios</h1>
       <hr className={styles.separador} />
-      <small  className={styles.girar}>Para ver el horario gira el móvil.</small>
+      <small className={styles.girar}>Para ver el horario gira el móvil.</small>
       <div className={styles.containerTable}>
         <Listar data={data} />
       </div>
@@ -147,7 +144,7 @@ export default function Horarios({ data }) {
       <Header />
       <h1 className={styles.title}>Horarios</h1>
       <hr className={styles.separador} />
-      <small  className={styles.girar}>Para ver el horario gira el móvil.</small>
+      <small className={styles.girar}>Para ver el horario gira el móvil.</small>
       <div className={styles.containerTable}>
         <ListarF data={data} />
       </div>
