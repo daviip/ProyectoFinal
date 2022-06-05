@@ -121,6 +121,10 @@
   grid-column-start: 2;
 }
 
+.girar{
+  display: none;
+}
+
 .parainfo {
   font-size: 1.25rem;
   font-weight: bold;
@@ -408,5 +412,10 @@
     margin-left: 1rem;
     margin-right: 1rem;
     margin-bottom: 8rem;
+  }
+
+  .girar{
+    display: block;
+    text-align: center;
   }
 }
