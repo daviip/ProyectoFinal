@@ -199,9 +199,9 @@ export const PerfilUser = ({ user, data, dataTarifas, dataUsers }) => {
                     onChange={handleChange}
                   >
                     <option value="">Seleccione una tarifa</option>
-                    {dataTarifas.map((tarifa) => {
+                    {dataTarifas.map((tarifa, i) => {
                       return (
-                        <option value={tarifa.nombre}>
+                        <option value={tarifa.nombre} key={i}>
                           {tarifa.nombre} -- {tarifa.precio}€
                         </option>
                       );
@@ -258,9 +258,9 @@ export const PerfilUser = ({ user, data, dataTarifas, dataUsers }) => {
               <div className={styles.botonera}>
                 <select onChange={(e) => setUserB(e.target.value)}>
                   <option value="-">Borrado de usuario</option>
-                  {dataUsers.map((c) => {
+                  {dataUsers.map((c, i) => {
                     return (
-                      <option value={c._id}>
+                      <option value={c._id} key={i}>
                         {c.nombre} {c.apellido}
                       </option>
                     );

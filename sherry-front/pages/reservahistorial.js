@@ -20,8 +20,8 @@ export default function Clase({ data, userData }) {
       <h1 className={styles.title}>Historial</h1>
       <hr className={styles.separador} />
       <div className={styles.margen}>
-        {data.map((clases) =>
-        <div>
+        {data.map((clases, i) =>
+        <div key={i}>
           {clases.historial.map((h, i) => (
             <div key={i}>
               <h1>{h.nombre}</h1>
@@ -41,11 +41,8 @@ export default function Clase({ data, userData }) {
             </div>
           ))}
           <hr className={styles.separador} />
-
           </div>
-          
         )}
-
       </div>
       <Footer />
     </div>

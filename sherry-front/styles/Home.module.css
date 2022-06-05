@@ -250,6 +250,11 @@
   padding: 0.25rem;
 }
 
+.selectF {
+  width: 10rem;
+  margin: auto;
+}
+
 .select:hover {
   background-color: #f2e2fa;
   color: rgb(212, 0, 255);

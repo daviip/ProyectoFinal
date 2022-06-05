@@ -128,11 +128,11 @@ export default function AddUser({ data }) {
           <br></br>
           <br></br>
           <label>Tarifa</label>
-          <select onChange={(e) => setTarifa(e.target.value)}>
+          <select onChange={(e) => setTarifa(e.target.value)} className={styles.selectF}>
             <option value="">Seleccione una tarifa</option>
             {data.map((tarifa) => {
               return (
-                <option value={tarifa.nombre}>
+                <option value={tarifa.nombre} key={tarifa.nombre}>
                   {tarifa.nombre} -- {tarifa.precio}€
                 </option>
               );
