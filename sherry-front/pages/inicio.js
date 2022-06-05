@@ -25,7 +25,9 @@ export default function Inicio() {
           localStorage.setItem("token", data._id);
           window.location = "/";
         }
-      });
+      })
+      .catch((err) => alert("Usuario o contraseña incorrectos"));
+      
   };
 
   return (
