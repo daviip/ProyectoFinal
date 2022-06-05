@@ -147,6 +147,7 @@ export default function Horarios({ data }) {
       <Header />
       <h1 className={styles.title}>Horarios</h1>
       <hr className={styles.separador} />
+      <small  className={styles.girar}>Para ver el horario gira el móvil.</small>
       <div className={styles.containerTable}>
         <ListarF data={data} />
       </div>
