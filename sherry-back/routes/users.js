@@ -66,10 +66,11 @@ router.post("/login", function (req, res, next) {
 
 // Eliminar usuario
 router.delete("/delete/:id", function (req, res, next) {
-  User.findByIdAndRemove(req.params.id, req.body, function (err, user) {
+  User.findByIdAndDelete(req.params.id, req.body, function (err, user) {
     if (err) return next(err);
     res.json(user);
   });
+  // User.findOneAndRemove
 });
 
 // Editar usuario
