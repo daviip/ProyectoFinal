@@ -3,7 +3,7 @@ import { Footer } from "../components/Footer";
 import { backend } from "../public/backend";
 import styles from "../styles/Home.module.css";
 
-export default function Clase({ data, userData }) {
+export default function ReservaActual({ data, userData }) {
   const cambiaNombre = (e) => {
     let nombre = "";
     userData.map((user) => {
