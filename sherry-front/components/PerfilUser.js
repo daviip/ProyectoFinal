@@ -255,7 +255,7 @@ export const PerfilUser = ({ user, data, dataTarifas, dataUsers }) => {
                   </Link>
                 </button>
               </div>
-              {/* <div className={styles.botonera}>
+              <div className={styles.botonera}>
                 <select onChange={(e) => setUserB(e.target.value)}>
                   <option value="-">Borrado de usuario</option>
                   {dataUsers.map((c, i) => {
@@ -269,7 +269,7 @@ export const PerfilUser = ({ user, data, dataTarifas, dataUsers }) => {
                 <button className={styles.loginB} onClick={() => borrarUser()}>
                   <a>Borrar Usuario</a>
                 </button>
-              </div> */}
+              </div>
               <div>
                 <button className={styles.loginB}>
                   <Link href="/reservaactual">
@@ -277,7 +277,7 @@ export const PerfilUser = ({ user, data, dataTarifas, dataUsers }) => {
                   </Link>
                 </button>
                 <button className={styles.loginB}>
-                  <Link href="/historial">
+                  <Link href="/reservahistorial">
                     <a>Ver Historial Reservas</a>
                   </Link>
                 </button>
