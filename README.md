@@ -1,27 +1,21 @@
 # SHERRY-FIT
 
-#### DAVID PADIAL PINTEÑO
+Sherry fit es un proyecto desarrollado por David Padial Pinteño, para su trabajo final del Grado Superior de Desarrollo de Aplicaciones Web.
 
-##### Introducción al proyecto
+### Finalidad
 
-Voy a realizar una página web para un gimnasio. Tanto mostrar información del gimnasio, como para reservar pistas y salas de deportes.
+Tiene como finalidad hacer una web de un gimnasio con información que mostrar además, para reservar las clases que tiene el gimnasio en cada horario de la semana.
 
-##### Objetivos
+Está desplegado en una web para desarrollo(sherry-fit.vercel.app) por lo que estará dormido la mayor parte del tiempo.
 
-La finalidad del proyecto es la anteriormente descrita,  y tendrá el siguiente menú:
+### Instalación
 
-1. Página de inicio, donde se presenta al gimnasio.
-2. Tarifas, donde aparecerá las tarifas del gimnasio en ese momento, con algunas ofertas puntuales.
-3. Horarios, donde puedes ver los horarios de las clases.
-4. Reservas, para que los clientes del gimnasio puedan reservar las clases y pistas para no quedarse sin ellas.
-5.  Contacto, la información de contacto con un mapa de donde está el gimnasio y un formulario de contacto por si necesita más información.
+La instalación es bastanse sencilla. Debes de entrar en la carpeta sherry-back y ejecutar el comando "npm install". Una vez hecho, crea un fichero con el nombre ".env" y en el escribir lo siguiente:
 
-##### Medios hardware y software a utilizar
+NODE_ENV = development
+PORT = 5000
+DB_URI = 'mongodb+srv://admin:admin@sherry.qk60x.mongodb.net/Gimnasio?retryWrites=true&w=majority'
 
-- Para el desarrollo se pretende utilizar el Nodejs y Nextjs, conectado con una base de datos mongodb. Usaré también React para la parte fronted.
-- Además, necesitaré mi ordenador personal para poner desarrollarlo todo junto al entorno de desarrollo que usaré, que será Visual Studio Code.
+Una vez tengamos el fichero, ejecutamos "npm run dev"
 
-##### Planificación
-
-Pretendo empezar a mediados de Marzo y acabarlo en más o menos en dos meses.
-
+También tenemos que entrar en la carpeta sherry-front y ejecutar el comando "npm install" y "npm run dev"
