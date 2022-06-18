@@ -11,9 +11,11 @@ Está desplegado en una web para desarrollo(sherry-fit.vercel.app) por lo que es
 ### Instalación
 
 La instalación es bastanse sencilla. Debes de entrar en la carpeta sherry-back y ejecutar el comando ```npm install ```. Una vez hecho, crea un fichero con el nombre ".env" y en el escribir lo siguiente: 
-```NODE_ENV = development```
-```PORT = 5000```
-```DB_URI = 'mongodb+srv://admin:admin@sherry.qk60x.mongodb.net/Gimnasio?retryWrites=true&w=majority'```
+```
+NODE_ENV = development
+PORT = 5000
+DB_URI = 'mongodb+srv://admin:admin@sherry.qk60x.mongodb.net/Gimnasio?retryWrites=true&w=majority'
+```
 Una vez tengamos el fichero, ejecutamos ```npm run dev```
 
 También tenemos que entrar en la carpeta sherry-front y ejecutar el comando ```npm install``` y ```npm run dev```
